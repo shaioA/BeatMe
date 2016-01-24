@@ -3,8 +3,11 @@
 <html>
 <head lang="en">
 
+    <link rel="stylesheet" text="text/css" href="../stylesheets/style.css">
     <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/javascripts/main.js" />
+
 
     <script>
         var socket = io.connect();
@@ -15,9 +18,76 @@
 
     </script>
     <meta charset="UTF-8">
-    <title></title>
+    <title>BeatMe!</title>
 </head>
 <body>
-test BeatMe !!
+
+    <header>
+        <div class="content-wrapper clearfix">
+            <div class="username" >Alex</div>
+            <ul>
+                <li>$100</li>
+                <li class="coinsIcon"></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="mainBody">
+
+        <!---Login page-->
+        <div id="loginPage" class="startPage clearfix">
+            <h1>BEAT ME</h1>
+            <!--<button id="" class="btn">connect with facebook</button>-->
+
+            <span class="loginButton">
+                <span class="innerLogin"></span>
+
+            </span><span class="loginButton">
+                <span class="innerLogin"></span>
+
+            </span>
+        </div>
+
+        <!--Games page-->
+        <div id="iconsPage" class="content-wrapper" >
+            <h1>Choose your game</h1>
+            <div class="box">
+                <ul class="line1">
+                    <li><img data-game="" src="../images/red_icon.png"></li>
+                    <li><img data-game="speedTyping" src="../images/green_icon.png"></li>
+                    <li><img data-game="" src="../images/pink_icon.png"></li>
+                </ul>
+                <ul class="line2">
+                    <li><img data-game="" src="../images/grey_light.png"></li>
+                    <li><img data-game="" src="../images/orange_icon.png"></li>
+                    <li><img data-game="" src="../images/yellow_icon.png"></li>
+                </ul>
+                <ul class="line3">
+                    <li><img data-game="" src="../images/blue_icon.png"></li>
+                    <li><img data-game="" src="../images/grey_icon.png"></li>
+                    <li><img data-game="" src="../images/light_green_icon.png"></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Game Type Page-->
+        <div id="matchGame">
+            <a>icon of page</a>
+            <h1>Game Title</h1>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div>Train</div>
+            <div>Play</div>
+
+        </div>
+
+
+    </div>
+
+
+
 </body>
 </html>

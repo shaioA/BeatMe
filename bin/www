@@ -33,11 +33,16 @@ server.on('listening', onListening);
 
 io.on('connection', function (socket) {
     console.log('connection');
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
+
+  socket.on('login123', function (data) {
     console.log(data);
+    socket.emit('login123_response', "you can get it!");
   });
+
+
 });
+
+
 
 /**
  * Normalize a port into a number, string, or false.
