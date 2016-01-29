@@ -170,21 +170,53 @@ h1 {
 
 .box {
   /*border: 1px solid black;*/
-  width:70%;
+  width: 60%;
   height: 600px;
   margin: 0 auto;
   padding: 0;
 }
 
-.box > ul {
-  display: inline-flex;
-  height: 160px;
+.flex-container{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row nowrap;
+  justify-content: space-around;
 }
 
-.box > ul > li img{
-  padding: 0px 46px 0 0px;
-  cursor: pointer;
+/*flex-direction: row | row-reverse | column | column-reverse;*/
+/*justify-content: flex-start | flex-end | center | space-between | space-around;*/
+
+.flex-item {
+  /*background: tomato;*/
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
 }
+
+/*.box > ul {*/
+  /*display: inline-flex;*/
+  /*height: 160px;*/
+/*}*/
+
+/*.box > ul > li img{*/
+  /*padding: 0px 46px 0 0px;*/
+  /*cursor: pointer;*/
+/*}*/
 
 #matchGame {
   display: none;
@@ -205,3 +237,35 @@ h1#title-game {
   display: inline-block;
   float: left;
 }
+
+@media (min-width: 1025px) {
+
+  .box {
+    width: 55%;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+
+    .box {
+      width: 63%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+
+  .box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .box {
+    width: 100%;
+  }
+}
+
+
+
+
