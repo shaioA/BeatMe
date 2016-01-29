@@ -190,3 +190,18 @@ h1 {
   display: none;
 }
 
+.top-container{
+  padding-top: 50px;
+}
+
+img#pic-game {
+  float: left;
+  display: inline-block;
+}
+
+h1#title-game {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: left;
+}
