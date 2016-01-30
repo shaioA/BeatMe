@@ -46,12 +46,13 @@ $(document).ready(function(){
    $('.box > ul > li img').click(function(e) {
        var game = $(this).attr('data-game');
        console.log('sending to server...');
-       socket.emit('gametype', {typeGame: game })
+       socket.emit('gametype', {typeGame: game });
    });
 
     //game start page
     $('input').on('input',function(e){
         console.log('writing: ', $(this).val());
+        socket.emit('userwriting', {gameNumber: 123, inputVal:$(this).val()});
     });
 
 });
