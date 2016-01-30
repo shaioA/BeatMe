@@ -49,4 +49,9 @@ $(document).ready(function(){
        socket.emit('gametype', {typeGame: game })
    });
 
+    //game start page
+    $('input').on('input',function(e){
+        console.log('writing: ', $(this).val());
+    });
+
 });
