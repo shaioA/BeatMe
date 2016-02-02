@@ -25,7 +25,7 @@ MainCtrl.prototype.init = function(io){
             console.log(data);
 
             var game = new Game();
-            game.startGame();
+            game.startGame(socket);
 
 
 
