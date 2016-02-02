@@ -39,6 +39,10 @@ io.on('connection', function (socket) {
     socket.emit('login123_response', "you can get it!");
   });
 
+    socket.on('userwriting', function (data) {
+        console.log(data);
+        //socket.emit('login123_response', "you can get it!");
+    });
 
 });
 
@@ -102,4 +106,6 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+
+    console.log('Listening on ' + bind);
 }

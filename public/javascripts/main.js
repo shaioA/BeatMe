@@ -45,14 +45,25 @@ $(document).ready(function(){
    //go to the game page
    $('.box > ul > li img').click(function(e) {
        var game = $(this).attr('data-game');
-       console.log('sending to server...');
-       socket.emit('gametype', {typeGame: game });
+
+       //console.log('sending to server...');
+       //socket.emit('gametype', {typeGame: game });
+
+       $('#iconsPage').hide();
+       $('#gameStart').show();
    });
 
     //game start page
     $('input').on('input',function(e){
         console.log('writing: ', $(this).val());
         socket.emit('userwriting', {gameNumber: 123, inputVal:$(this).val()});
+    });
+
+    //listener game type responds
+    socket.on('opponent_response', function(game) {
+
+        $('#opponentTxt').html(game.opponentTxt);
+
     });
 
 });
