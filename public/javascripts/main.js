@@ -37,6 +37,11 @@ $(document).ready(function(){
 
     });
 
+    socket.on('timer_response',function(time){
+        console.log(time);
+        $('#timer').html(time);
+    });
+
     //click on login button display games page
    $('.loginButton').click(function() {
        socket.emit('login123',{user:'shai',pwd:'robinzon'});
@@ -51,6 +56,10 @@ $(document).ready(function(){
 
        $('#iconsPage').hide();
        $('#gameStart').show();
+
+       //start game
+       socket.emit('gameStart', {});
+
    });
 
     //game start page

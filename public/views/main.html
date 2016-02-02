@@ -10,11 +10,11 @@
 
 
     <script>
-        var socket = io.connect();
-        socket.on('news', function (data) {
-            console.log(data);
-            socket.emit('my other event', { my: 'data' });
-        });
+//        var socket = io.connect();
+//        socket.on('news', function (data) {
+//            console.log(data);
+//            socket.emit('my other event', { my: 'data' });
+//        });
 
     </script>
     <meta charset="UTF-8">
@@ -104,6 +104,7 @@
 
                 <div class="writeText">
                         <div id="opponentTxt"></div>
+                    <div id="timer"></div>
                         <input type="text" name="word">
                 </div>
             </div>

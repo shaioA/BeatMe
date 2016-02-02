@@ -21,6 +21,7 @@ app.set('port', port);
 
 var server = http.createServer(app);
 var io = require('socket.io')(server);
+var ctrl = require('./ctrl/MainCtrl.js')
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -30,23 +31,8 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-
-io.on('connection', function (socket) {
-    console.log('connection');
-
-  socket.on('login123', function (data) {
-    console.log(data);
-    socket.emit('login123_response', "you can get it!");
-  });
-
-    socket.on('userwriting', function (data) {
-        console.log(data);
-        //socket.emit('login123_response', "you can get it!");
-    });
-
-});
-
-
+// init socket ctrl
+ctrl.init(io);
 
 /**
  * Normalize a port into a number, string, or false.
