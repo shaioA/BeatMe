@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 
 function Game(type, users){
     this.type = type;
@@ -9,13 +11,23 @@ function Game(type, users){
 Game.prototype.startGame = function(socket){
     var self = this;
 
+
     var timer = setInterval(function(){
 
-        console.log(self.timer);
-        socket.emit('timer_response', self.timer);
-        self.timer--;
 
-        if(self.timer > 15){
+
+        // bradcast time
+        _.each(self.users,function(user){
+            console.log(self.timer);
+            if(user.socket) {
+                user.socket.emit('timer_response', self.timer);
+            }
+
+        });
+
+        // check if timer finish
+        self.timer--;
+        if(self.timer < 0){
             console.log('Time ended !');
             clearInterval(timer);
         }

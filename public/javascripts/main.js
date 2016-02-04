@@ -75,4 +75,14 @@ $(document).ready(function(){
 
     });
 
+
+    //listener game TXT responds
+    socket.on('opponentTxt', function(game) {
+
+        $('#opponentTxt').html(game.opponentTxt);
+
+    });
+
+
+
 });
