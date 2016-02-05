@@ -45,16 +45,25 @@ MainCtrl.prototype.init = function(io){
             console.log('adding game...');
             self.games[uuid1] = game;
 
+            //build members list
             var userToClient = [];
             _.each(self.usersConnected,function(key, val){
                 console.log(key.name,key.socketId );
-                userToClient.push({name: key.name,id:key.socketId});
+                if(socket.id != key.socketId){
+                    userToClient.push({name: key.name,id:key.socketId});
+                }
             });
 
             console.log('sending status to all game users');
             socket.emit('gameJoin_response',{uuid:uuid,users:userToClient}); // {users: self.usersConnected,uuid: uuid1}
         });
 
+
+        socket.on('pickedMember',function(opponentSocketId){
+            console.log('opponentSocketId:',opponentSocketId,'mySocketId:',socket.id);
+
+
+        });
 
         // Listner GAME
         socket.on('gameStart', function (data) {

@@ -11,6 +11,8 @@ $(document).ready(function(){
     //connect to the server
     var socket = io.connect();
 
+
+
     // socket listener
     socket.on('login123_response',function(data){
         console.log(data);
@@ -45,10 +47,15 @@ $(document).ready(function(){
         // populate next screen
         $.each(data.users,function(i, user){
 
-            $('#user-connected').append('<li userSocketId="'+user.socketId+'"><span class="tab">' + user.name+ '</span></li>');
+            $('#user-connected').append('<li userSocketId="'+user.id+'"><span class="tab">' + user.name+ '</span></li>');
         });
 
+        $('#user-connected li').click(function(){
 
+            var userSocketId = $(this).attr('userSocketId');
+            console.log(userSocketId);
+            socket.emit('pickedMember',userSocketId);
+        });
 
 
         $('#iconsPage').hide();
@@ -79,10 +86,7 @@ $(document).ready(function(){
 
    });
 
-    $('#user-connected li').click(function(){
-        var userSocketId = $(this).attr('userSocketId');
-        console.log(userSocketId);
-    });
+
 
     //game start page
     $('input').on('input',function(e){
