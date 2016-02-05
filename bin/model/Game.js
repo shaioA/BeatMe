@@ -1,14 +1,15 @@
 var _ = require('lodash');
 
 
-function Game(type, users){
+function Game(uuid, type, users){
     this.type = type;
+    this.uuid = uuid;
     this.users = users;
     this.timer = 15;
 
 }
 
-Game.prototype.startGame = function(socket){
+Game.prototype.startGame = function(){
     var self = this;
 
 

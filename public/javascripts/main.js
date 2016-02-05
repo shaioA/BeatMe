@@ -2,7 +2,7 @@
  * Created by Shai on 1/16/2016.
  */
 
-
+var gameUuid = {};
 
 $(document).ready(function(){
     //show login page when loading application
@@ -37,6 +37,25 @@ $(document).ready(function(){
 
     });
 
+    socket.on('gameJoin_response',function(data){
+
+        gameUuid = data.uuid;
+        console.log('game uuid = ' , data.uuid);
+
+        // populate next screen
+        $.each(data.users,function(i, user){
+
+            $('#user-connected').append('<li><a href=""><span class="tab">' + user.name+ '</span></a></li>');
+        });
+
+
+
+
+        $('#iconsPage').hide();
+        $('#userList').show();
+
+    });
+
     socket.on('timer_response',function(time){
         console.log(time);
         $('#timer').html(time);
@@ -54,26 +73,24 @@ $(document).ready(function(){
        //console.log('sending to server...');
        //socket.emit('gametype', {typeGame: game });
 
-       $('#iconsPage').hide();
-       $('#gameStart').show();
 
        //start game
-       socket.emit('gameStart', {});
+       socket.emit('gameJoin', {});
 
    });
 
     //game start page
     $('input').on('input',function(e){
         console.log('writing: ', $(this).val());
-        socket.emit('userwriting', {gameNumber: 123, inputVal:$(this).val()});
+        socket.emit('userwriting', {uuid: gameUuid, inputVal:$(this).val()});
     });
 
     //listener game type responds
-    socket.on('opponent_response', function(game) {
-
-        $('#opponentTxt').html(game.opponentTxt);
-
-    });
+//    socket.on('opponent_response', function(game) {
+//
+//        $('#opponentTxt').html(game.opponentTxt);
+//
+//    });
 
 
     //listener game TXT responds

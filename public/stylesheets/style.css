@@ -238,6 +238,11 @@ h1#title-game {
   float: left;
 }
 
+/*user connected*/
+#userList{
+    display: none;
+}
+
 #gameStart{
   display: none;
 }
