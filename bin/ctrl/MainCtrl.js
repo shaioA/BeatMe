@@ -47,7 +47,7 @@ MainCtrl.prototype.init = function(io){
 
             var userToClient = [];
             _.each(self.usersConnected,function(key, val){
-                console.log(key.name,key.socketIds );
+                console.log(key.name,key.socketId );
                 userToClient.push({name: key.name,id:key.socketId});
             });
 

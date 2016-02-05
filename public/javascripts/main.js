@@ -45,7 +45,7 @@ $(document).ready(function(){
         // populate next screen
         $.each(data.users,function(i, user){
 
-            $('#user-connected').append('<li><a href=""><span class="tab">' + user.name+ '</span></a></li>');
+            $('#user-connected').append('<li userSocketId="'+user.socketId+'"><span class="tab">' + user.name+ '</span></li>');
         });
 
 
@@ -78,6 +78,11 @@ $(document).ready(function(){
        socket.emit('gameJoin', {});
 
    });
+
+    $('#user-connected li').click(function(){
+        var userSocketId = $(this).attr('userSocketId');
+        console.log(userSocketId);
+    });
 
     //game start page
     $('input').on('input',function(e){
