@@ -54,7 +54,7 @@ $(document).ready(function(){
 
             var userSocketId = $(this).attr('userSocketId');
             console.log(userSocketId);
-            socket.emit('pickedMember',userSocketId);
+            socket.emit('pickedMember',{uuid:gameUuid, userSocketId:userSocketId});
         });
 
 
@@ -66,6 +66,21 @@ $(document).ready(function(){
     socket.on('timer_response',function(time){
         console.log(time);
         $('#timer').html(time);
+    });
+
+    socket.on('pickedMember_response',function(uuid){
+
+
+        console.log('pickedMember_response!');
+        gameUuid = uuid;
+
+        //go to game page
+        $('#iconsPage').hide();
+        $('#rulesGame').hide();
+        $('#userList').hide();
+
+        $('#gameStart').show();
+
     });
 
     //click on login button display games page
@@ -103,9 +118,9 @@ $(document).ready(function(){
 
 
     //listener game TXT responds
-    socket.on('opponentTxt', function(game) {
-
-        $('#opponentTxt').html(game.opponentTxt);
+    socket.on('opponentTxt_push', function(game) {
+        console.log(game);
+        $('#opponentTxt').html(game.inputVal);
 
     });
 

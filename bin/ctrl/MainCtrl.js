@@ -15,7 +15,7 @@ MainCtrl.prototype.init = function(io){
     var self = this;
 
     io.on('connection', function (socket) {
-        console.log('connection');
+        console.log('new user connection !');
 
         // LOGIN
         socket.on('login123', function (data) {
@@ -37,13 +37,36 @@ MainCtrl.prototype.init = function(io){
 
         // PREGAME - join a room and watting room
         socket.on('gameJoin', function (data) {
+            var isNeedAnewGame = true;
+            // check if needed to open new game
 
-            console.log('creating game...');
-            var uuid1 = uuid.v1();
-            console.log('game id:', uuid1);
-            var game = new Game(uuid1, 'speedType',[{socket:socket},{socket:null}]);
-            console.log('adding game...');
-            self.games[uuid1] = game;
+            _.each(self.games,function(game){
+                if(game.status === 'init' && !isNeedAnewGame){
+                    console.log('found a game, joining... ');
+
+                    game.users[1] = self.usersConnected[socket.id];
+
+                    game.users[0].socket.emit('pickedMember_response',{});
+
+
+                    isNeedAnewGame = false;
+                    return false;
+                }
+            });
+
+            // need to
+
+            if(isNeedAnewGame) {
+//                console.log('creating game...');
+//                var uuid1 = uuid.v1();
+//                console.log('game id:', uuid1);
+//                var game = new Game(uuid1, 'speedType', [
+//                    {socket: socket},
+//                    {socket: null}
+//                ]);
+//                console.log('adding game...');
+//                self.games[uuid1] = game;
+            }
 
             //build members list
             var userToClient = [];
@@ -55,12 +78,41 @@ MainCtrl.prototype.init = function(io){
             });
 
             console.log('sending status to all game users');
-            socket.emit('gameJoin_response',{uuid:uuid,users:userToClient}); // {users: self.usersConnected,uuid: uuid1}
+            socket.emit('gameJoin_response',{uuid:null,users:userToClient}); // {users: self.usersConnected,uuid: uuid1}
         });
 
 
-        socket.on('pickedMember',function(opponentSocketId){
-            console.log('opponentSocketId:',opponentSocketId,'mySocketId:',socket.id);
+        socket.on('pickedMember',function(param){
+
+            //var self = this;
+            console.log('opponentSocketId:',param.userSocketId,'mySocketId:',socket.id,'uuid:',param.uuid);
+
+            console.log('creating game...');
+            var uuid1 = uuid.v1();
+            console.log('game id:', uuid1);
+            var game = new Game(uuid1, 'speedType', [
+                {socket: socket},
+                {socket: self.usersConnected[param.userSocketId].socket}
+            ]);
+
+            console.log('user1 sok:',socket);
+            console.log('user1 sok:',self.usersConnected[param.userSocketId].socket);
+
+            console.log('adding game...');
+            self.games[uuid1] = game;
+
+            //  game and start it
+           // var game = self.games[param.uuid];
+
+            //sending tap for starting the game to client
+//            _.each(game.users ,function(user){
+//                console.log('sending tap for starting the game to client:',user, 'length:',game.users.length);
+//                //user.socket.emit('pickedMember_response',{});
+//            });
+
+            // start game
+            game.startGame();
+            console.log('game started!');
 
 
         });
@@ -69,18 +121,6 @@ MainCtrl.prototype.init = function(io){
         socket.on('gameStart', function (data) {
             var self = this;
             console.log(data);
-
-
-
-
-//            var game = new Game(uuid1, 'speedType',[{socket:socket},{socket:null}]);
-
-
-
-            game.startGame();
-
-
-
 
         });
 
@@ -97,11 +137,11 @@ MainCtrl.prototype.init = function(io){
                 var game = self.games[data.uuid];
                 // action fit to this
                 _.each(game.users,function(user){
-
+                    console.log('user loop');
                     //send txt to all opponents
-                    if(!user.socket === socket){
+                    if(user.socket !== socket){
                         console.log('sending to other your txt');
-                        socket.emit('opponentTxt',data);
+                        user.socket.emit('opponentTxt_push',data);
                     }
                 });
             }
