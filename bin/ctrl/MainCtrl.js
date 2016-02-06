@@ -36,6 +36,7 @@ MainCtrl.prototype.init = function(io){
 
         // PREGAME - join a room and watting room
         socket.on('gameJoin', function (data) {
+            console.log('gameJoin');
             var isNeedAnewGame = true;
             // check if needed to open new game
 
