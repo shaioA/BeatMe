@@ -88,6 +88,9 @@ MainCtrl.prototype.init = function(io){
             console.log('creating game...');
             var uuid1 = uuid.v1();
             console.log('game id:', uuid1);
+
+            if(!self.usersConnected[param.userSocketId]) return false;
+
             var game = new Game(uuid1, 'speedType', [
                 {socket: socket},
                 {socket: self.usersConnected[param.userSocketId].socket}
