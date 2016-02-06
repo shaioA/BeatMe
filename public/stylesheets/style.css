@@ -247,6 +247,12 @@ h1#title-game {
   display: none;
 }
 
+.inputST {
+    font-size: 80px;
+    border: none;
+    margin-top: 480px;
+}
+
 .player-container-left{
   padding: 0;
   margin: 0;
@@ -314,6 +320,9 @@ input[type=text] {
   background-color: yellow;
 }
 
+#gameEnd{
+    display: none;
+}
 
 
 @media (min-width: 1025px) {

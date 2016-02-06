@@ -6,6 +6,8 @@ function Game(uuid, type, users){
     this.uuid = uuid;
     this.users = users;
     this.timer = 15;
+    this.winner = {};
+    this.jackpot = 0;
     this.status = 'init';
 
 }
@@ -27,6 +29,13 @@ Game.prototype.startGame = function(){
 
 
 
+    // broadcast the sentence
+    _.each(self.users,function(user){
+        console.log(self.timer);
+        if(user.socket) {
+            user.socket.emit('gameInitData_push',  'When life gives you a hundred reasons to cry, show life that you have a thousand reasons to smile');
+        }
+    });
 
     self.status = 'working';
     var timer = setInterval(function(){
@@ -35,7 +44,7 @@ Game.prototype.startGame = function(){
         _.each(self.users,function(user){
             console.log(self.timer);
             if(user.socket) {
-                user.socket.emit('timer_response', self.timer);
+                user.socket.emit('timer_push', self.timer);
             }
         });
 
@@ -43,7 +52,20 @@ Game.prototype.startGame = function(){
         self.timer--;
         if(self.timer < 0){
             console.log('Time ended !');
+
+            // calculate game result
             self.status = 'end';
+            self.winner = self.users[0];
+
+            // broadcast that game over - and calculate game result
+            _.each(self.users,function(user){
+                if(user.socket == self.winner.socket) {
+                    user.socket.emit('gameEnd_push', 'win');
+                }else{
+                    user.socket.emit('gameEnd_push', 'lost');
+                }
+            });
+
             clearInterval(timer);
         }
 

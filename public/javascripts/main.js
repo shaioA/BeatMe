@@ -63,7 +63,7 @@ $(document).ready(function(){
 
     });
 
-    socket.on('timer_response',function(time){
+    socket.on('timer_push',function(time){
         console.log(time);
         $('#timer').html(time);
     });
@@ -83,10 +83,36 @@ $(document).ready(function(){
 
     });
 
+    socket.on('gameInitData_push',function(gameInitData){
+        $('#sentence').html(gameInitData);
+    });
+
+    socket.on('gameEnd_push',function(result){
+        console.log(result);
+        if(result && result === 'win'){
+            $('#youWhat').html('You Won!');
+        }else {
+            $('#youWhat').html('You Lost!');
+        }
+
+        $('#gameStart').hide();
+        $('#gameEnd').show();
+
+    });
+
+
+
     //click on login button display games page
    $('.loginButton').click(function() {
        socket.emit('login123',{user:'shai',pwd:'robinzon'});
        });
+
+    $('#BackToGames').click(function() {
+        $('#iconsPage').show();
+        $('#gameEnd').hide();
+    });
+
+
 
    //go to the game page
    $('.box > ul > li img').click(function(e) {

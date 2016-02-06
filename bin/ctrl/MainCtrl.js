@@ -34,7 +34,6 @@ MainCtrl.prototype.init = function(io){
             socket.emit('login123_response', "you can get it!");
         });
 
-
         // PREGAME - join a room and watting room
         socket.on('gameJoin', function (data) {
             var isNeedAnewGame = true;
@@ -48,31 +47,30 @@ MainCtrl.prototype.init = function(io){
 
                     game.users[0].socket.emit('pickedMember_response',{});
 
-
-                    isNeedAnewGame = false;
                     return false;
                 }
             });
 
-            // need to
+            // remove dead connections
+//            _.each(self.usersConnected,function(val){
+//                if(val.socket.connected === false){
+//                    delete val;
+//                }
+//            });
 
-            if(isNeedAnewGame) {
-//                console.log('creating game...');
-//                var uuid1 = uuid.v1();
-//                console.log('game id:', uuid1);
-//                var game = new Game(uuid1, 'speedType', [
-//                    {socket: socket},
-//                    {socket: null}
-//                ]);
-//                console.log('adding game...');
-//                self.games[uuid1] = game;
+            for(var k in self.usersConnected) {
+                if(self.usersConnected[k].socket.connected === false){
+                    console.log('delete user');
+                    delete self.usersConnected[k];
+                }
             }
+
 
             //build members list
             var userToClient = [];
             _.each(self.usersConnected,function(key, val){
                 console.log(key.name,key.socketId );
-                if(socket.id != key.socketId){
+                if( socket.id != key.socketId){
                     userToClient.push({name: key.name,id:key.socketId});
                 }
             });
@@ -80,7 +78,6 @@ MainCtrl.prototype.init = function(io){
             console.log('sending status to all game users');
             socket.emit('gameJoin_response',{uuid:null,users:userToClient}); // {users: self.usersConnected,uuid: uuid1}
         });
-
 
         socket.on('pickedMember',function(param){
 
@@ -101,15 +98,6 @@ MainCtrl.prototype.init = function(io){
             console.log('adding game...');
             self.games[uuid1] = game;
 
-            //  game and start it
-           // var game = self.games[param.uuid];
-
-            //sending tap for starting the game to client
-//            _.each(game.users ,function(user){
-//                console.log('sending tap for starting the game to client:',user, 'length:',game.users.length);
-//                //user.socket.emit('pickedMember_response',{});
-//            });
-
             // start game
             game.startGame();
             console.log('game started!');
@@ -117,7 +105,7 @@ MainCtrl.prototype.init = function(io){
 
         });
 
-        // Listner GAME
+        // GAME - start
         socket.on('gameStart', function (data) {
             var self = this;
             console.log(data);
@@ -146,10 +134,7 @@ MainCtrl.prototype.init = function(io){
                 });
             }
 
-
-            //socket.emit('login123_response', "you can get it!");
         });
-
 
     });
 
