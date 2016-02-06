@@ -15,7 +15,7 @@ MainCtrl.prototype.init = function(io){
     var self = this;
 
     io.on('connection', function (socket) {
-        console.log('new user connection !');
+        console.log('new user connection !',socket.id);
 
         // LOGIN
         socket.on('login123', function (data) {
