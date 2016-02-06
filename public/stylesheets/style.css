@@ -2,11 +2,10 @@
    #basic reset & import
    ========================================================================== */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-
 html {
   box-sizing: border-box;
-  /*font-family: 'Open Sans', sans-serif;*/
+  -moz-box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
   font-size: 100%;
 }
 
@@ -20,13 +19,11 @@ body {
   padding: 0;
 }
 
-
-
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lato", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+
 }
 
 a {
@@ -37,130 +34,78 @@ ul {
   list-style: none;
 }
 
-.clearfix:before,
-.clearfix:after {
-  content: '';
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
 .mainBody{
-  width: 80%;
-  margin: 0 auto;
+  border: 1px solid red;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  font-weight: bold;
+}
+header  {
+  border: 1px solid blue;
+  min-height: 10vh;
+  /*-webkit-justify-content: flex-start;*/
+  /*-ms-flex-pack: start;*/
+  /*justify-content: flex-start;*/
+  flex: 1 2 auto;
+  align-self: auto;
 }
 
-.content-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-}
-header{
-  display: none;
-}
-header {
-  width: 100%;
-  height: 100px;
-  margin: 0 auto;
-  background: #000088;
-  color: #ffffff;
-  font-size:22px;
-  font-weight: 700;
+footer {
+  border: 1px solid black;
+  min-height: 10vh;
+  /*-webkit-justify-content: flex-end;*/
+  /*-ms-flex-pack: end;*/
+
+  flex: 1 2 auto;
+  align-self: auto;
 }
 
-header .username {
-  padding-top: 37px;
-  float: left;
+.startPage {
+  /*border: 1px solid green;*/
+  min-height: 80vh;
+  /*flex: 3 2 auto;*/
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
-header ul{
-  float: right;
-  display: inline-block;
-  width: 17%;
-  padding: 15px 0px;
-}
-
-header ul li:first-child{
-  float: left;
-  padding: 7px 14px;
-
-}
-
-header ul li:last-child{
-  background: url("../images/coins_header.png") no-repeat;
-  float: right;
-  width: 45px;
-  height: 40px;
-  padding: 4px 8px;
-}
-
-h1 {
+.startPage h1{
   color: #000088;
   text-align: center;
-  padding: 20px;
+  font-size: 3em;
+  align-items: center;
 }
+
+/*.startPage > img {*/
+  /*max-width: 70%;*/
+  /*margin: 0 16%;*/
+/*}*/
+
+
+
+
 
 /*Login page*/
 #loginPage {
   display: block;
-}
-
-.startPage h1{
-  font-size: 3.5em;
-  left: 0;
-  line-height: 65px;
-  margin: auto;
-  margin-top: -65px;
-  position: absolute;
-  top: 20%;
-  width: 100%;
-}
-
-/*.btn{*/
-  /*display: inline-block;*/
-  /*font-weight: 400;*/
-  /*text-align: center;*/
-  /*vertical-align: middle;*/
-  /*cursor: pointer;*/
-  /*background-image: none;*/
-  /*border: 1px solid transparent;*/
-  /*padding: 16px 50px;*/
-  /*font-size: 20px;*/
-  /*text-transform: uppercase;*/
-  /*border-radius: 4px;*/
-/*}*/
-
-/*.btn-primary{*/
-
-/*}*/
-
-.startPage .loginButton {
-  left: 0;
-  line-height: 65px;
-  margin: auto;
-  margin-top: -90px;
-  position: absolute;
-  top: 70%;
-  width: 100%;
-}
-
-.loginButton {
-  background: url("../images/signup-with-facebook-button-png-i18.png") no-repeat;
-  display: inline-block;
-  width: 100%;
-  font-size: 0;
-  line-height: 0;
-  vertical-align: middle;
-  background-size: 30%;
-  background-position: 50% 50%;
-  cursor: pointer;
-}
-
-.innerLogin{
-  display: block;
-  height: 0;
-  padding-top: 22.75%;
 }
 
 /*Games page*/

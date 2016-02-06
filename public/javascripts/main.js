@@ -7,7 +7,8 @@ var gameUuid = {};
 $(document).ready(function(){
     //show login page when loading application
     $('#loginPage').show();
-
+    $('header').css('visibility', 'hidden');
+    $('footer').css('visibility', 'hidden');
 
     //connect to the server
     var socket = io.connect();
@@ -104,7 +105,7 @@ $(document).ready(function(){
 
 
     //click on login button display games page
-   $('.loginButton').click(function() {
+   $('.startPage img').click(function() {
        socket.emit('login123',{user:'shai',pwd:'robinzon'});
        });
 

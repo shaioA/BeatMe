@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/javascripts/main.js" />
 
+    <!--google fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <script>
 //        var socket = io.connect();
@@ -22,127 +24,128 @@
 </head>
 <body>
 
-    <header>
-        <div class="content-wrapper clearfix">
-            <div class="username" >Alex</div>
-            <ul>
-                <li>$100</li>
-                <li class="coinsIcon"></li>
-            </ul>
-        </div>
-    </header>
-
     <div class="mainBody">
+        <header>
+            <div class="   ">
+                <div class="username" >Alex</div>
+                <ul>
+                    <li>$100</li>
+                    <li class="coinsIcon"></li>
+                </ul>
+            </div>
+        </header>
 
-        <!---Login page-->
-        <div id="loginPage" class="startPage clearfix">
-            <h1>BEAT ME</h1>
-            <!--<button id="" class="btn">connect with facebook</button>-->
+            <!--Login page FLEX-->
+            <div id="loginPage" class="content">
+                <div class=" startPage">
+                    <h1 class="loginPge-item">BEAT ME</h1>
+                    <img class="loginPge-item" src="../images/fb-connect-button.png"/>
+                </div>
+            </div>
 
-            <span class="loginButton">
-                <span class="innerLogin"></span>
+            <!--Games page-->
+            <div id="iconsPage" >
+                <div class="content-wrapper">
+                    <h1>Choose your game</h1>
+                    <div class="box">
+                        <ul class="flex-container">
+                            <li class="flex-item"><img data-game="" src="../images/red_icon.png"></li>
+                            <li class="flex-item"><img data-game="speedTyping" src="../images/green_icon.png"></li>
+                            <li class="flex-item"><img data-game="" src="../images/pink_icon.png"></li>
+                        </ul>
+                        <ul class="flex-container">
+                            <li class="flex-item"><img data-game="" src="../images/grey_light.png"></li>
+                            <li class="flex-item"><img data-game="" src="../images/orange_icon.png"></li>
+                            <li class="flex-item"><img data-game="" src="../images/yellow_icon.png"></li>
+                        </ul>
+                        <ul class="flex-container">
+                            <li class="flex-item"><img data-game="" src="../images/blue_icon.png"></li>
+                            <li class="flex-item"><img data-game="" src="../images/grey_icon.png"></li>
+                            <li class="flex-item"><img data-game="" src="../images/light_green_icon.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            </span><span class="loginButton">
-                <span class="innerLogin"></span>
-
-            </span>
-        </div>
-
-        <!--Games page-->
-        <div id="iconsPage" >
-            <div class="content-wrapper">
-                <h1>Choose your game</h1>
-                <div class="box">
-                    <ul class="flex-container">
-                        <li class="flex-item"><img data-game="" src="../images/red_icon.png"></li>
-                        <li class="flex-item"><img data-game="speedTyping" src="../images/green_icon.png"></li>
-                        <li class="flex-item"><img data-game="" src="../images/pink_icon.png"></li>
+            <!-- Game Type Page-->
+            <div id="rulesGame" >
+                <div class="content-wrapper">
+                    <div class="flex-header">
+                        <img id="pic-game" class="rules-item rule-flex1"  src="../images/speedometer_64.png"/>
+                        <h1 id="title-game" class="rules-item rule-flex2">Speed typing</h1>
+                    </div>
+                    <ul id="descrip-game">
+                        <li>hola</li>
+                        <li>alkfakaf</li>
+                        <li>hola</li>
+                        <li>alkfakaf</li>
                     </ul>
-                    <ul class="flex-container">
-                        <li class="flex-item"><img data-game="" src="../images/grey_light.png"></li>
-                        <li class="flex-item"><img data-game="" src="../images/orange_icon.png"></li>
-                        <li class="flex-item"><img data-game="" src="../images/yellow_icon.png"></li>
+                    <div>Train</div>
+                    <div>Play</div>
+                </div>
+            </div>
+
+            <!-- Game Users List-->
+            <div id="userList" >
+                <div class="content-wrapper">
+                    <div class="top-container">
+                        <!--<img id="pic-game1" src="../images/green_icon.png"/>-->
+                        <h1 id="title-game">Users connected</h1>
+                        <br/>
+                        <h3>Waiting for opponent...</h3>
+
+                        <br/>
+                        <h3>or click on user</h3>
+
+                    </div>
+                    <ul id="user-connected" style="clear: both;">
+
                     </ul>
-                    <ul class="flex-container">
-                        <li class="flex-item"><img data-game="" src="../images/blue_icon.png"></li>
-                        <li class="flex-item"><img data-game="" src="../images/grey_icon.png"></li>
-                        <li class="flex-item"><img data-game="" src="../images/light_green_icon.png"></li>
+                    <div>Train</div>
+                    <div>Play</div>
+                </div>
+            </div>
+
+            <!--Game Begin -->
+            <div id="gameStart" class="clearfix">
+                <!--<div class="content-wrapper clearfix">-->
+                    <ul class="player-container-left">
+                        <li class="player-item"></li>
+                        <li class="player-item">3</li>
                     </ul>
+                    <ul class="player-container-right">
+                        <li class="player-item"></li>
+                        <li class="player-item  ">1</li>
+                    </ul>
+                    <div id="sentence" style="font-size: 21px;color: brown;"></div>
+                    <div class="writeText">
+                            <div id="opponentTxt">test</div>
+                        <div id="timer" style="font-size: 35px;font-weight: bold"></div>
+                            <input type="text" name="word" class="inputST">
+                    </div>
+            </div>
+
+            <!-- Game End-->
+            <div id="gameEnd"  class="clearfix">
+                <div class="content-wrapper">
+                    <div class="top-container">
+                    <span>-= GAME OVER =-</span>
+                        <span id="youWhat">You </span>
+                        <button id="BackToGames">Back To Games</button>
                 </div>
             </div>
-        </div>
-
-        <!-- Game Type Page-->
-        <div id="rulesGame" >
-            <div class="content-wrapper">
-                <div class="flex-header">
-                    <img id="pic-game" class="rules-item rule-flex1"  src="../images/speedometer_64.png"/>
-                    <h1 id="title-game" class="rules-item rule-flex2">Speed typing</h1>
-                </div>
-                <ul id="descrip-game">
-                    <li>hola</li>
-                    <li>alkfakaf</li>
-                    <li>hola</li>
-                    <li>alkfakaf</li>
-                </ul>
-                <div>Train</div>
-                <div>Play</div>
             </div>
-        </div>
 
-        <!-- Game Users List-->
-        <div id="userList" >
-            <div class="content-wrapper">
-                <div class="top-container">
-                    <!--<img id="pic-game1" src="../images/green_icon.png"/>-->
-                    <h1 id="title-game">Users connected</h1>
-                    <br/>
-                    <h3>Waiting for opponent...</h3>
-
-                    <br/>
-                    <h3>or click on user</h3>
-
-                </div>
-                <ul id="user-connected" style="clear: both;">
-
+        <footer>
+            <div class="   ">
+                <div class="username" >Alex</div>
+                <ul>
+                    <li>$100</li>
+                    <li class="coinsIcon"></li>
                 </ul>
-                <div>Train</div>
-                <div>Play</div>
             </div>
-        </div>
-
-        <!--Game Begin -->
-        <div id="gameStart" class="clearfix">
-            <!--<div class="content-wrapper clearfix">-->
-                <ul class="player-container-left">
-                    <li class="player-item"></li>
-                    <li class="player-item">3</li>
-                </ul>
-                <ul class="player-container-right">
-                    <li class="player-item"></li>
-                    <li class="player-item  ">1</li>
-                </ul>
-                <div id="sentence" style="font-size: 21px;color: brown;"></div>
-                <div class="writeText">
-                        <div id="opponentTxt">test</div>
-                    <div id="timer" style="font-size: 35px;font-weight: bold"></div>
-                        <input type="text" name="word" class="inputST">
-                </div>
-        </div>
-
-        <!-- Game End-->
-        <div id="gameEnd"  class="clearfix">
-            <div class="content-wrapper">
-                <div class="top-container">
-                <span>-= GAME OVER =-</span>
-                    <span id="youWhat">You </span>
-                    <button id="BackToGames">Back To Games</button>
-            </div>
-        </div>
-
+        </footer>
     </div>
-
-
 
 </body>
 </html>
