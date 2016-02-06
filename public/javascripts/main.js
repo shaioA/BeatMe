@@ -8,6 +8,7 @@ $(document).ready(function(){
     //show login page when loading application
     $('#loginPage').show();
 
+
     //connect to the server
     var socket = io.connect();
 

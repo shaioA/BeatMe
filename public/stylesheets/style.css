@@ -222,20 +222,62 @@ h1 {
   display: none;
 }
 
-.top-container{
-  padding-top: 50px;
+.flex-header{
+  width:100%;
+  padding: 30px;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+  /*-ms-box-orient: horizontal;*/
+  /*display: -webkit-box;*/
+  /*display: -moz-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: -moz-flex;*/
+  /*display: -webkit-flex;*/
+  /*display: flex;*/
+}
+
+.flex-header img{
+  margin-left: 2.5em;
+}
+
+.flex-header h1 {
+
+}
+
+.rules-item{
+  padding: 10px;
+  border: 1px solid grey;
+
+  color: darkblue;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 76px;
+}
+
+.rule-flex1{
+  /*flex: 1 1 20em;*/
+}
+.rule-flex2{
+  flex: 2 2 20em;
 }
 
 img#pic-game {
-  float: left;
-  display: inline-block;
+
 }
 
 h1#title-game {
   margin: 0;
-  padding: 0;
-  display: inline-block;
-  float: left;
+  padding: 0px 20px;
+}
+
+.flex-header ul#descrip-game {
+  margin-left: 1em;
 }
 
 /*user connected*/
@@ -323,7 +365,6 @@ input[type=text] {
 #gameEnd{
     display: none;
 }
-
 
 @media (min-width: 1025px) {
 
