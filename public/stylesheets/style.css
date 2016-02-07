@@ -330,12 +330,38 @@ input[type=text] {
   .box {
     width: 80%;
   }
+
+  .startPage h1{
+    color: #000088;
+    text-align: center;
+    font-size: 5em;
+    align-items: center;
+  }
+
+
+  .fbutton{
+    width: 540px;
+    height: 110px;
+  }
 }
 
 @media (max-width: 640px) {
 
   .box {
     width: 100%;
+  }
+
+  .startPage h1{
+    color: #000088;
+    text-align: center;
+    font-size: 5em;
+    align-items: center;
+  }
+
+
+  .fbutton{
+    width: 540px;
+    height: 110px;
   }
 }
 
