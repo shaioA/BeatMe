@@ -23,7 +23,8 @@ $(document).ready(function(){
             // get in to the app
             $('#loginPage').hide();
             $('#iconsPage').show();
-            $('header').css('display', 'block');
+            $('header').css('visibility', 'visible');
+            $('footer').css('visibility', 'visible');
         }
     });
 
@@ -117,8 +118,9 @@ $(document).ready(function(){
 
 
    //go to the game page
-   $('.box > ul > li img').click(function(e) {
+   $('.chooseGame > ul > li img').click(function(e) {
        var game = $(this).attr('data-game');
+
 
        //console.log('sending to server...');
        //socket.emit('gametype', {typeGame: game });
