@@ -117,16 +117,17 @@ MainCtrl.prototype.init = function(io){
         });
 
         // GAME - writing stream
-        socket.on('userwriting', function (data) {
+        socket.on('gameStream', function (data) {
             console.log(data);
 
-            //_.contains(self.games,);
-            // check
-
-
+            // updating the users
             if(self.games.hasOwnProperty(data.uuid)){
                 console.log('found game in cache');
                 var game = self.games[data.uuid];
+
+                //calculate game move
+                game.calculate({});
+
                 // action fit to this
                 _.each(game.users,function(user){
                     console.log('user loop');
@@ -141,9 +142,6 @@ MainCtrl.prototype.init = function(io){
         });
 
     });
-
-
-
 };
 
 

@@ -72,5 +72,15 @@ Game.prototype.startGame = function(){
     },1000);
 };
 
+Game.prototype.calculate = function(){
+
+    // update private data
+
+    // check if somebody win & end the game
+
+    // if not , send a feedback to users (opponent mistakes, rewords, etc... )
+
+};
+
 
 module.exports = Game;
