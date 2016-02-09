@@ -19,7 +19,7 @@ router.get('/getName', function(req, res, next) {
     res.send('[shai,martha,bu]');
 });
 
-router.get('/doLogin', function(req, res, next) {
+router.post('/doLogin', function(req, res, next) {
     //console.log('__dirname:',__dirname);
     //res.render('index', { title: 'Express' });
     //res.sendfile('/views/main.html')
