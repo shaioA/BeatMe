@@ -16,7 +16,7 @@ router.get('/getName', function(req, res, next) {
     //res.render('index', { title: 'Express' });
     //res.sendfile('/views/main.html')
     //res.sendFile('main.html', {root: 'c:\\Users\\Sport-Zone\\wsProjects\\BeatMe\\public\\views' })
-    res.send('[shai,martha,bu]');
+    res.send(JSON.stringify({name1:shai,name2:martha,name3:bu}));
 });
 
 router.get('/doLogin', function(req, res, next) {
