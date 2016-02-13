@@ -118,7 +118,7 @@ $(document).ready(function(){
 
 
    //go to the game page
-   $('.chooseGame > ul > li img').click(function(e) {
+   $('.flex-item').click(function(e) {
        var game = $(this).attr('data-game');
 
 

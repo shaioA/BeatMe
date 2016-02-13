@@ -37,6 +37,8 @@
             </div>
         </header>
 
+
+
             <!--Login page FLEX-->
             <div id="loginPage" class="startPage">
                     <h1>BEAT ME</h1>
@@ -46,23 +48,22 @@
             <!--Games page-->
             <div id="iconsPage" class="chooseGame">
                     <h1>Choose your game</h1>
-                    <!--<div class="box">-->
-                        <ul class="flex-container">
-                            <li class="flex-item"><img data-game="" src="../images/red_icon.png"></li>
-                            <li class="flex-item"><img data-game="speedTyping" src="../images/green_icon.png"></li>
-                            <li class="flex-item"><img data-game="" src="../images/pink_icon.png"></li>
-                        </ul>
-                        <ul class="flex-container">
-                            <li class="flex-item"><img data-game="" src="../images/grey_light.png"></li>
-                            <li class="flex-item"><img data-game="" src="../images/orange_icon.png"></li>
-                            <li class="flex-item"><img data-game="" src="../images/yellow_icon.png"></li>
-                        </ul>
-                        <ul class="flex-container">
-                            <li class="flex-item"><img data-game="" src="../images/blue_icon.png"></li>
-                            <li class="flex-item"><img data-game="" src="../images/grey_icon.png"></li>
-                            <li class="flex-item"><img data-game="" src="../images/light_green_icon.png"></li>
-                        </ul>
-                    <!--</div>-->
+                        <div class="flex-container">
+                            <div class="flex-item"><img data-game="" src="../images/red_icon.png"></div>
+                            <div class="flex-item"><img data-game="speedTyping" src="../images/green_icon.png"></div>
+                            <div class="flex-item"><img data-game="" src="../images/pink_icon.png"></div>
+                        </div>
+                        <div class="flex-container">
+                            <div class="flex-item"><img data-game="" src="../images/grey_light.png"></div>
+                            <div class="flex-item"><img data-game="" src="../images/orange_icon.png"></div>
+                            <div class="flex-item"><img data-game="" src="../images/yellow_icon.png"></div>
+                        </div>
+                        <div class="flex-container">
+                            <div class="flex-item"><img data-game="" src="../images/blue_icon.png"></div>
+                            <div class="flex-item"><img data-game="" src="../images/grey_icon.png"></div>
+                            <div class="flex-item"><img data-game="" src="../images/light_green_icon.png"></div>
+                        </div>
+
             </div>
 
             <!-- Game Type Page-->
@@ -101,21 +102,22 @@
             </div>
 
             <!--Game Begin -->
-            <div id="gameStart" class="">
-                    <ul class="player-container-left">
-                        <li class="player-item"></li>
-                        <li class="player-item">3</li>
-                    </ul>
-                    <ul class="player-container-right">
-                        <li class="player-item"></li>
-                        <li class="player-item  ">1</li>
-                    </ul>
-                    <div id="sentence" style="font-size: 21px;color: brown;"></div>
-                    <div class="writeText">
-                            <div id="opponentTxt">test</div>
-                        <div id="timer" style="font-size: 35px;font-weight: bold"></div>
-                            <input type="text" name="word" class="inputST">
+            <div id="gameStart" class="currentGame">
+                <div class="headerGame">
+                    <div class="player-container">
+                        <div class="player-container-item"></div>
+                        <div class="player-number-item">3</div>
                     </div>
+                    <div class="player-container">
+                        <div class="player-container-item"></div>
+                        <div class="player-number-item  ">1</div>
+                    </div>
+                </div>
+                <div class="writeText">
+                    <div id="opponentTxt">test</div>
+                    <div id="timer" style="font-size: 35px;font-weight: bold"></div>
+                    <input type="text" name="word" class="inputST">
+                </div>
             </div>
 
             <!-- Game End-->
@@ -126,13 +128,20 @@
                         <button id="BackToGames">Back To Games</button>
                 </div>
             </div>
+
+
+
+
         <footer>
-                    <ul>
-                        <li>BeatMe copyrights</li>
-                        <li></li>
-                    </ul>
-      </footer>
+           <div>
+               <div>BeatMe copyrights</div>
+           </div>
+         </footer>
+
     </div>
+
+
+
 
 </body>
 </html>

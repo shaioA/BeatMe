@@ -117,43 +117,98 @@ footer {
   font-size: 2em;
 }
 
-.flex-container{
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.flex-container {
   display: flex;
-
-  -webkit-flex-flow: row nowrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
   justify-content: space-around;
 }
 
-.flex-item {
-  background: tomato;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
+.flex-item{
+  align-items: center;
+ }
 
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
+.flex-item img{
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
+.currentGame{
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-/*.box {*/
-/*border: 1px solid black;*/
-/*width: 60%;*/
-/*height: 600px;*/
-/*margin: 0 auto;*/
-/*padding: 0;*/
+.headerGame{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.player-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+
+}
+
+.player-container-item{
+  align-self: center;
+border: 1px solid #D7DBDD;
+/* font-size: 40px; */
+width: 90px;
+height: 90px;
+border-radius: 100%;
+box-shadow: 0 2px 1px rgba(#000000, 0.05), 0 2px 3px rgba(#000000, 0.05), 0 4px 8px rgba(#000000, 0.05);
+}
+
+.player-number-item{
+  align-self: center;
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+.player-container-right{
+  /*margin-left: auto;*/
+  /*max-width: 245px;*/
+  border: 1px solid blue;
+}
+/*.flex-container1{*/
+  /*padding: 0;*/
+  /*margin: 0;*/
+  /*list-style: none;*/
+
+  /*display: -webkit-box;*/
+  /*display: -moz-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: -webkit-flex;*/
+  /*display: flex;*/
+
+  /*-webkit-flex-flow: row nowrap;*/
+  /*justify-content: space-around;*/
 /*}*/
+
+/*.flex-item1 {*/
+  /*background: tomato;*/
+  /*padding: 5px;*/
+  /*width: 200px;*/
+  /*height: 150px;*/
+  /*margin-top: 10px;*/
+
+  /*line-height: 150px;*/
+  /*color: white;*/
+  /*font-weight: bold;*/
+  /*font-size: 3em;*/
+  /*text-align: center;*/
+/*}*/
+
+
 
 
 
@@ -246,56 +301,55 @@ h1#title-game {
 .inputST {
     font-size: 80px;
     border: none;
-    margin-top: 480px;
 }
 
-.player-container-left{
-  padding: 0;
-  margin: 0;
-  list-style: none;
+/*.player-container-left{*/
+  /*padding: 0;*/
+  /*margin: 0;*/
+  /*list-style: none;*/
 
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  /*display: -webkit-box;*/
+  /*display: -moz-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: -webkit-flex;*/
+  /*display: flex;*/
 
-  -webkit-flex-flow: row nowrap;
-  justify-content: flex-start;
-  float: left;
-}
+  /*-webkit-flex-flow: row nowrap;*/
+  /*justify-content: flex-start;*/
+  /*float: left;*/
+/*}*/
 
-.player-container-right{
-  padding: 0;
-  margin: 0;
-  list-style: none;
+/*.player-container-right{*/
+  /*padding: 0;*/
+  /*margin: 0;*/
+  /*list-style: none;*/
 
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  /*display: -webkit-box;*/
+  /*display: -moz-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: -webkit-flex;*/
+  /*display: flex;*/
 
-  -webkit-flex-flow: row nowrap;
-  justify-content: flex-end;
-  float: right;
-}
+  /*-webkit-flex-flow: row nowrap;*/
+  /*justify-content: flex-end;*/
+  /*float: right;*/
+/*}*/
 
-.player-item{
+/*.player-item{*/
   /*background: tomato;*/
-  padding: 5px;
-  width: 100px;
-  height: 100px;
-  margin-top: 15px;
-  margin-right: 12px;
+  /*padding: 5px;*/
+  /*width: 100px;*/
+  /*height: 100px;*/
+  /*margin-top: 15px;*/
+  /*margin-right: 12px;*/
 
-  line-height: 90px;
-  color: blue;
-  font-weight: bold;
-  font-size: 4em;
-  text-align: center;
-  border: 1px solid black;
-}
+  /*line-height: 90px;*/
+  /*color: blue;*/
+  /*font-weight: bold;*/
+  /*font-size: 4em;*/
+  /*text-align: center;*/
+  /*border: 1px solid black;*/
+/*}*/
 
 .writeText{
 
