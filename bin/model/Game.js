@@ -9,6 +9,7 @@ function Game(uuid, type, users){
     this.winner = {};
     this.jackpot = 0;
     this.status = 'init';
+    this.saying = 'When life gives you a hundred reasons to cry, show life that you have a thousand reasons to smile';
 
 }
 
@@ -72,11 +73,20 @@ Game.prototype.startGame = function(){
     },1000);
 };
 
-Game.prototype.calculate = function(){
+Game.prototype.calculate = function(data,socket){
+    var self = this;
 
     // update private data
+    self.users[socket.id]
+
 
     // check if somebody win & end the game
+    if(self.saying === self.users[0].txt){
+
+    }else  if(self.saying === self.users[1].txt){
+
+    }
+
 
     // if not , send a feedback to users (opponent mistakes, rewords, etc... )
 

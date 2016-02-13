@@ -126,7 +126,7 @@ MainCtrl.prototype.init = function(io){
                 var game = self.games[data.uuid];
 
                 //calculate game move
-                game.calculate({});
+                game.calculate(data,socket);
 
                 // action fit to this
                 _.each(game.users,function(user){
