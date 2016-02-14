@@ -115,7 +115,11 @@ $(document).ready(function(){
         $('#gameEnd').hide();
     });
 
-
+    //for develop purposes ONLY (Martha)
+    $('.jumpPage').click(function(){
+        $('#userList').css('display', 'none');
+        $('#gameStart').css('display', 'flex');
+    });
 
    //go to the game page
    $('.flex-item').click(function(e) {

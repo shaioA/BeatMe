@@ -138,16 +138,17 @@ footer {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .headerGame{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   padding: 10px;
+  align-self: auto;
 }
 
 .player-container{
@@ -178,6 +179,10 @@ box-shadow: 0 2px 1px rgba(#000000, 0.05), 0 2px 3px rgba(#000000, 0.05), 0 4px 
   /*margin-left: auto;*/
   /*max-width: 245px;*/
   border: 1px solid blue;
+}
+
+.bottomIconGames{
+
 }
 /*.flex-container1{*/
   /*padding: 0;*/
