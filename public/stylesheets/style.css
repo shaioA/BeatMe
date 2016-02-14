@@ -155,7 +155,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 
 }
 
@@ -166,12 +166,12 @@ border: 1px solid #D7DBDD;
 width: 90px;
 height: 90px;
 border-radius: 100%;
-box-shadow: 0 2px 1px rgba(#000000, 0.05), 0 2px 3px rgba(#000000, 0.05), 0 4px 8px rgba(#000000, 0.05);
+box-shadow: -3px 3px 6px #888888;
 }
 
 .player-number-item{
   align-self: center;
-  font-size: 24px;
+  font-size: 35px;
   padding-left: 10px;
 }
 
@@ -367,12 +367,22 @@ h1#title-game {
    top: 190%;
  }
 
-input[type=text] {
+input[type="text"] {
   width: 600px;
   height: 115px;
-  display: block;
-  margin-bottom: 10px;
-  background-color: yellow;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  /*display: block;*/
+  /*margin-bottom: 10px;*/
+  /*background-color: yellow;*/
+}
+
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+  outline: none;
 }
 
 #gameEnd{
