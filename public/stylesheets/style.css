@@ -309,6 +309,10 @@ h1#title-game {
   min-height: 80vh;
 }
 
+.top-container{
+  font-size: 3em;
+}
+
 #gameStart{
   display: none;
 }
