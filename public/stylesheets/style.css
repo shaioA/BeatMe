@@ -34,6 +34,10 @@ ul {
   list-style: none;
 }
 
+img {
+  border-style: none;
+}
+
 .mainBody{
   border: 1px solid red;
   min-height: 100vh;
@@ -84,10 +88,14 @@ footer {
 .startPage h1{
   color: #000088;
   text-align: center;
-  font-size: 3em;
+  font-size: 7em;
   align-items: center;
 }
 
+.startPage img.fbutton{
+  width: 500px;
+  height: 105px;
+}
 /*Games page*/
 #iconsPage {
   display: none;
@@ -114,7 +122,7 @@ footer {
 .chooseGame h1 {
   color: #000000;
   text-align: center;
-  font-size: 2em;
+  font-size: 4em;
 }
 
 .flex-container {
@@ -130,8 +138,10 @@ footer {
  }
 
 .flex-item img{
-  padding: 5px 10px;
+  padding: 30px 10px;
   cursor: pointer;
+  width: 300px;
+  border-style: none;
 }
 
 .currentGame{
@@ -389,59 +399,59 @@ input[type="text"].focus {
     display: none;
 }
 
-@media (min-width: 1025px) {
+/*@media (min-width: 1025px) {*/
 
-  .box {
-    width: 55%;
-  }
-}
+  /*.box {*/
+    /*width: 55%;*/
+  /*}*/
+/*}*/
 
-@media (min-width: 801px) and (max-width: 1024px) {
+/*@media (min-width: 801px) and (max-width: 1024px) {*/
 
-    .box {
-      width: 63%;
-    }
-}
+    /*.box {*/
+      /*width: 63%;*/
+    /*}*/
+/*}*/
 
-@media (min-width: 641px) and (max-width: 800px) {
+/*@media (min-width: 641px) and (max-width: 800px) {*/
 
-  .box {
-    width: 80%;
-  }
+  /*.box {*/
+    /*width: 80%;*/
+  /*}*/
 
-  .startPage h1{
-    color: #000088;
-    text-align: center;
-    font-size: 5em;
-    align-items: center;
-  }
-
-
-  .fbutton{
-    width: 540px;
-    height: 110px;
-  }
-}
-
-@media (max-width: 640px) {
-
-  .box {
-    width: 100%;
-  }
-
-  .startPage h1{
-    color: #000088;
-    text-align: center;
-    font-size: 5em;
-    align-items: center;
-  }
+  /*.startPage h1{*/
+    /*color: #000088;*/
+    /*text-align: center;*/
+    /*font-size: 5em;*/
+    /*align-items: center;*/
+  /*}*/
 
 
-  .fbutton{
-    width: 540px;
-    height: 110px;
-  }
-}
+  /*.fbutton{*/
+    /*width: 540px;*/
+    /*height: 110px;*/
+  /*}*/
+/*}*/
+
+/*@media (max-width: 640px) {*/
+
+  /*.box {*/
+    /*width: 100%;*/
+  /*}*/
+
+  /*.startPage h1{*/
+    /*color: #000088;*/
+    /*text-align: center;*/
+    /*font-size: 5em;*/
+    /*align-items: center;*/
+  /*}*/
+
+
+  /*.fbutton{*/
+    /*width: 540px;*/
+    /*height: 110px;*/
+  /*}*/
+/*}*/
 
 
 
