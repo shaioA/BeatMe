@@ -78,11 +78,17 @@ $(document).ready(function(){
         gameUuid = uuid;
 
         //go to game page
-        $('#iconsPage').hide();
-        $('#rulesGame').hide();
-        $('#userList').hide();
+        $('#iconsPage').css('display', 'none');
+        $('#rulesGame').css('display', 'none');
+        $('#userList').css('display', 'none');
 
-        $('#gameStart').show();
+        $('#gameStart').css('display', 'flex');
+
+        //$('#iconsPage').hide();
+        //$('#rulesGame').hide();
+        //$('#userList').hide();
+
+        //$('#gameStart').show();
 
     });
 
