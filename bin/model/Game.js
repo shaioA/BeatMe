@@ -77,7 +77,7 @@ Game.prototype.calculate = function(data,socket){
     var self = this;
 
     // update private data
-    self.users[socket.id]
+    var currentUser = self.users[socket.id];
 
 
     // check if somebody win & end the game
