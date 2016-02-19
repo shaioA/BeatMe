@@ -51,7 +51,7 @@ $(document).ready(function(){
         // populate next screen
         $.each(data.users,function(i, user){
 
-            $('#user-connected').append('<li userSocketId="'+user.id+'"><span class="tab">' + user.name+ '</span></li>');
+            $('#user-connected').append('<li userSocketId="'+user.id+'"><img src="../images/userMale.png" style="float:left"/><div class="tab" >' + user.name+ '</div></li>');
         });
 
         $('#user-connected li').click(function(){
@@ -130,8 +130,9 @@ $(document).ready(function(){
 
    //go to the game page
    $('.flex-item').click(function(e) {
-       var game = $(this).attr('data-game');
 
+       var game = $(this).attr('data-game');
+        //if (!game) return false;
 
        //console.log('sending to server...');
        //socket.emit('gametype', {typeGame: game });

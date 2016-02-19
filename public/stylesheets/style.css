@@ -167,6 +167,23 @@ footer {
   align-content: center;
 }
 
+
+
+/*users list page*/
+#user-connected li {
+    height: 130px;
+    border: 1px solid;
+    margin-bottom: 30px;
+}
+
+#user-connected .tab {
+    font-size: 57px;
+    line-height: 129px;
+    padding-left: 31%;
+}
+
+
+
 .headerGame{
   display: flex;
   flex-direction: row;
