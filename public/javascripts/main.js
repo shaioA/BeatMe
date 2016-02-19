@@ -5,6 +5,7 @@
 var gameUuid = {};
 
 $(document).ready(function(){
+
     //show login page when loading application
     $('#loginPage').show();
     $('header').css('visibility', 'hidden');
@@ -135,9 +136,19 @@ $(document).ready(function(){
        //console.log('sending to server...');
        //socket.emit('gametype', {typeGame: game });
 
+       //animate img
+       $(this).addClass('animated flipInY');
 
-       //start game
-       socket.emit('gameJoin', {});
+       setTimeout(function(){
+           //$(this).removeClass('animated flipInY');
+           $('.flex-item.animated.flipInY').removeClass('animated flipInY');
+           //start game
+           socket.emit('gameJoin', {});
+       },1100);
+
+
+
+
 
    });
 
