@@ -4,13 +4,16 @@
 
 var gameUuid = {};
 
+
+//if ('ontouchstart' in window) {
+//    window.addEventListener('load', function() {
+//        FastClick.attach(document.body);
+//    }, false);
+//}
+
 $(document).ready(function(){
 
-    if ('ontouchstart' in window) {
-        window.addEventListener('load', function() {
-            FastClick.attach(document.body);
-        }, false);
-    }
+
 
     //show login page when loading application
     $('#loginPage').show();

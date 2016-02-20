@@ -490,5 +490,18 @@ input[type="text"].focus {
 /*}*/
 
 
+@media (max-width: 40em) {
+    .startPage img.fbutton{
+        width: 200px;
+        height: 41px;
+    }
+
+    .startPage img.splashBeatMe{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
 
 
