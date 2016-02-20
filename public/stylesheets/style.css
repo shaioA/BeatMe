@@ -156,7 +156,7 @@ footer {
  }
 
 .flex-item img{
-  padding: 30px 10px;
+  /*padding: 30px 10px;*/
   cursor: pointer;
   /*width: 300px;*/
   border-style: none;
@@ -506,8 +506,8 @@ input[type="text"].focus {
 
 
    #iconsPage .flex-item img{
-        width: 130px;
-        height: 160px;
+       width: 130px;
+       height: 128px;
     }
 }
 
