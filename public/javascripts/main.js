@@ -14,6 +14,13 @@ var gameUuid = {};
 $(document).ready(function(){
 
 
+    //animate img
+    $('.startPage .splashBeatMe').addClass('animated bounceIn');
+
+    setTimeout(function(){
+        $('.startPage .splashBeatMe').removeClass('animated bounceIn');
+    },1100);
+
 
     //show login page when loading application
     $('#loginPage').show();

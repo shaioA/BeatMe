@@ -111,6 +111,11 @@ footer {
   width: 500px;
   height: 105px;
 }
+
+.startPage .splashBeatMe{
+    /*visibility: hidden;*/
+}
+
 /*Games page*/
 #iconsPage {
   display: none;
