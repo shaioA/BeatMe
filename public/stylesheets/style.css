@@ -116,7 +116,7 @@ footer {
   display: none;
 }
 
-.chooseGame {
+#iconsPage .chooseGame {
   /*align-self: center;*/
   min-height: 80vh;
   /*display: flex;*/
@@ -134,18 +134,18 @@ footer {
   /*justify-content: space-around;*/
 }
 
-.chooseGame h1 {
+#iconsPage .chooseGame h1 {
   color: #000000;
   text-align: center;
   font-size: 4em;
 }
 
-.flex-container {
+#iconsPage .flex-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .flex-item{
