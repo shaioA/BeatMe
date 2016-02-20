@@ -155,7 +155,7 @@ footer {
 .flex-item img{
   padding: 30px 10px;
   cursor: pointer;
-  width: 300px;
+  /*width: 300px;*/
   border-style: none;
 }
 
@@ -499,6 +499,12 @@ input[type="text"].focus {
     .startPage img.splashBeatMe{
         width: 300px;
         height: 300px;
+    }
+
+
+    .flex-item img{
+        width: 145px;
+        height: 160px;
     }
 }
 
