@@ -32,7 +32,8 @@ $(document).ready(function(){
         if(data){
             // get in to the app
             $('#loginPage').hide();
-            $('#iconsPage').show();
+//            $('#iconsPage').show();
+            $('#iconsPage').css('display', 'flex');
             $('header').css('visibility', 'visible');
             $('footer').css('visibility', 'visible');
         }
@@ -127,7 +128,9 @@ $(document).ready(function(){
        });
 
     $('#BackToGames').click(function() {
-        $('#iconsPage').show();
+//        $('#iconsPage').show();
+
+        $('#iconsPage').css('display', 'flex');
         $('#gameEnd').hide();
     });
 

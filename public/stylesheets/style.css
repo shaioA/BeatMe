@@ -114,6 +114,9 @@ footer {
 /*Games page*/
 #iconsPage {
   display: none;
+    flex-direction: column;
+    justify-content: center;
+    flex: 3 2 auto;
 }
 
 #iconsPage .chooseGame {
@@ -502,8 +505,8 @@ input[type="text"].focus {
     }
 
 
-    .flex-item img{
-        width: 145px;
+   #iconsPage .flex-item img{
+        width: 130px;
         height: 160px;
     }
 }
