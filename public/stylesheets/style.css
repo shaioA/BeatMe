@@ -347,6 +347,7 @@ h1#title-game {
 #userList{
     display: none;
   min-height: 80vh;
+  width: 100%;
 }
 
 .top-container{
@@ -355,12 +356,13 @@ h1#title-game {
 
 #gameStart{
   display: none;
+  width: 100%;
 }
 
-.inputST {
-    font-size: 80px;
-    border: none;
-}
+/*.inputST {*/
+    /*font-size: 80px;*/
+    /*border: none;*/
+/*}*/
 
 /*.player-container-left{*/
   /*padding: 0;*/
@@ -411,23 +413,13 @@ h1#title-game {
 /*}*/
 
 .writeText{
-
-}.writeText form{
-   left: 189px;
-   line-height: 65px;
-   margin: 0 auto;
-   /* margin-top: -90px; */
-   position: absolute;
-   top: 190%;
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 input[type="text"] {
-  width: 600px;
-  height: 115px;
-  padding: 10px;
-  border: none;
-  border-bottom: solid 2px #c9c9c9;
-  transition: border 0.3s;
+
   /*display: block;*/
   /*margin-bottom: 10px;*/
   /*background-color: yellow;*/
@@ -437,6 +429,14 @@ input[type="text"]:focus,
 input[type="text"].focus {
   border-bottom: solid 2px #969696;
   outline: none;
+}
+
+.wordBox{
+  /*padding: 5em 24em;*/
+  font-size: 10.75rem;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
 }
 
 #gameEnd{
@@ -497,7 +497,7 @@ input[type="text"].focus {
   /*}*/
 /*}*/
 
-
+/*small screens*/
 @media (max-width: 40em) {
     .startPage img.fbutton{
         width: 200px;
@@ -514,6 +514,10 @@ input[type="text"].focus {
        width: 100px;
        height: 100px;
     }
+
+   .wordBox{
+     font-size: 2.75rem;
+   }
 }
 
 
