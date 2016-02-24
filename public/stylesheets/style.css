@@ -196,9 +196,9 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /*margin-top: 30px;*/
   padding: 10px;
-  align-self: auto;
+  align-self: center;
+  width: 85%;
 }
 
 .player-container{
@@ -212,7 +212,6 @@ footer {
 .player-container-item{
   align-self: center;
 border: 1px solid #D7DBDD;
-/* font-size: 40px; */
 width: 90px;
 height: 90px;
 border-radius: 100%;
@@ -231,79 +230,49 @@ box-shadow: -3px 3px 6px #888888;
   border: 1px solid blue;
 }
 
+.interactiveLights{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  align-self: center;
+  width: 85%;
+}
+
+.interactiveLights img {
+  align-self: center;
+}
+
 .bottomIconGames{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: center;
+  width: 85%;
+}
+
+.footer-icon{
+  align-self: center;
+  padding: 0 12px 0 12px;
+}
+
+.coinsfooter{
+  align-self: center;
+  border: 1px solid #D7DBDD;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  box-shadow: -3px 3px 6px #888888;
+}
+
+.bottomIconGames:nth-child(3){
+  font-size:4em;
 
 }
-/*.flex-container1{*/
-  /*padding: 0;*/
-  /*margin: 0;*/
-  /*list-style: none;*/
-
-  /*display: -webkit-box;*/
-  /*display: -moz-box;*/
-  /*display: -ms-flexbox;*/
-  /*display: -webkit-flex;*/
-  /*display: flex;*/
-
-  /*-webkit-flex-flow: row nowrap;*/
-  /*justify-content: space-around;*/
-/*}*/
-
-/*.flex-item1 {*/
-  /*background: tomato;*/
-  /*padding: 5px;*/
-  /*width: 200px;*/
-  /*height: 150px;*/
-  /*margin-top: 10px;*/
-
-  /*line-height: 150px;*/
-  /*color: white;*/
-  /*font-weight: bold;*/
-  /*font-size: 3em;*/
-  /*text-align: center;*/
-/*}*/
-
-
-
-
-
-/*flex-direction: row | row-reverse | column | column-reverse;*/
-/*justify-content: flex-start | flex-end | center | space-between | space-around;*/
-
-
-/*.box > ul {*/
-  /*display: inline-flex;*/
-  /*height: 160px;*/
-/*}*/
-
-/*.box > ul > li img{*/
-  /*padding: 0px 46px 0 0px;*/
-  /*cursor: pointer;*/
-/*}*/
 
 #rulesGame {
   display: none;
 }
-
-/*.flex-header{*/
-  /*width:100%;*/
-  /*padding: 30px;*/
-  /*margin: 0;*/
-  /*list-style: none;*/
-
-  /*display: -webkit-flex;*/
-  /*display: flex;*/
-  /*-webkit-flex-direction: row;*/
-  /*flex-direction: row;*/
-
-  /*-ms-box-orient: horizontal;*/
-  /*display: -webkit-box;*/
-  /*display: -moz-box;*/
-  /*display: -ms-flexbox;*/
-  /*display: -moz-flex;*/
-  /*display: -webkit-flex;*/
-  /*display: flex;*/
-/*}*/
 
 .flex-header img{
   margin-left: 2.5em;
@@ -415,28 +384,22 @@ h1#title-game {
 .writeText{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-}
-
-input[type="text"] {
-
-  /*display: block;*/
-  /*margin-bottom: 10px;*/
-  /*background-color: yellow;*/
-}
-
-input[type="text"]:focus,
-input[type="text"].focus {
-  border-bottom: solid 2px #969696;
-  outline: none;
+  justify-content: center;
+  align-self: center;
+  width: 85%;
 }
 
 .wordBox{
-  /*padding: 5em 24em;*/
   font-size: 10.75rem;
   border: none;
   border-bottom: solid 2px #c9c9c9;
   transition: border 0.3s;
+}
+
+.wordBox:focus,
+.wordBox.focus{
+  border-bottom: solid 2px #969696;
+  outline: none;
 }
 
 #gameEnd{

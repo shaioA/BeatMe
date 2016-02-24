@@ -194,7 +194,9 @@ $(document).ready(function(){
         $('#opponentTxt').html(game.inputVal);
 
     });
-
-
-
+    //
+    //interactive light
+    //(function blink() {
+    //    $('.blink').fadeOut(500).fadeIn(500, blink);
+    //})();
 });
