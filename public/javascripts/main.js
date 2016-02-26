@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 
         $('#iconsPage').hide();
-        $('#userList').show();
+        $('#userList').css('display', 'flex');
 
     });
 

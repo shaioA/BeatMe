@@ -299,14 +299,11 @@ box-shadow: -3px 3px 6px #888888;
   flex: 2 2 20em;
 }
 
-img#pic-game {
 
-}
-
-h1#title-game {
-  margin: 0;
-  padding: 0px 20px;
-}
+/*h1#title-game {*/
+  /*/!*margin: 0;*!/*/
+  /*/!*padding: 0px 20px;*!/*/
+/*}*/
 
 .flex-header ul#descrip-game {
   margin-left: 1em;
@@ -319,9 +316,52 @@ h1#title-game {
   width: 100%;
 }
 
-.top-container{
-  font-size: 3em;
+.userScreen{
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+
 }
+
+.title-userScreen{
+  min-height: 20vh;
+    width:85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+
+    border: 1px solid green;
+}
+
+.title-userScreen h1{
+    font-size: 5em;
+    margin: 0;
+    text-align: center;
+}
+
+.title-userScreen h3{
+    font-size: 3em;
+    margin: 0;
+    text-align: left;
+}
+/*.title-userScreen{*/
+  /*font-size: 3em;*/
+/*}*/
+
+.currentUsers{
+  min-height: 60vh;
+    width:85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    border: 1px solid blue;
+}
+
+
 
 #gameStart{
   display: none;
