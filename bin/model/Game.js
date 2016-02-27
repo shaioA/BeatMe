@@ -1,19 +1,21 @@
 var _ = require('lodash');
+var phrases = require('./phrases');
 
 
 function Game(uuid, type, users){
     this.type = type;
     this.uuid = uuid;
     this.users = users;
-    this.timer = 15;
+    this.timer = 120;
     this.invervalTimer;
     this.winner = undefined;
     this.jackpot = 0;
     this.status = 'init';
-    this.phrase = 'Design is not just what it looks like and feels like';
-    //this.phrase = '"Design is not just what it looks like and feels like. Design is how it works. What a computer is to me is the most remarkable tool that we have ever come up with. Its the equivalent of a bicycle for our minds"';
+    this.phrase = phrases[Math.floor(Math.random() * phrases.length)];
 
-}
+   }
+
+
 
 Game.prototype.startGame = function(){
     var self = this;
