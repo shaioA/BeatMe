@@ -104,10 +104,22 @@ Game.prototype.calculate = function(data,socket){
                     user.socket.emit('gameEnd_push', 'lost');
                 }
             });
-
-
         }
+
     });
+
+    // check if user have a mistake
+    if (self.users[socket.id].txt[self.users[socket.id].txt.length-1] !== self.phrase[self.phrase.length-1])
+    {
+        console.log('opponentMistake_push');
+
+        //send to the opponent that a mistake has made
+        _.each(self.users,function(user){
+            if(user.socket.id !== socket.id) {
+                user.socket.emit('opponentMistake_push', {});
+            }
+        });
+    }
 
 
     // if not , send a feedback to users (opponent mistakes, rewords, etc... )
