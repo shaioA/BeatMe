@@ -303,7 +303,7 @@ footer {
 }
 
 .title-userScreen{
-  min-height: 20vh;
+  min-height: 10vh;
     width:85%;
     display: flex;
     flex-direction: column;
@@ -313,49 +313,41 @@ footer {
 }
 
 .title-userScreen h1{
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 700;
     margin: 0;
     text-align: center;
 }
 
-.title-userScreen h3{
-    font-size: 3em;
-    margin: 0;
-    text-align: left;
-}
-
 .currentUsers{
-  min-height: 60vh;
+  min-height: 70vh;
     width:85%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-self: center;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 
 .user-online {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0;
 }
 
 /*users list page*/
-.user-online li {
+.user-online div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 5px;
-
 }
 
-.user-online li img{
+.user-online div img{
     border: 1px solid;
 }
 
-.user-online li p{
+.user-online div p{
     width: 76%;
     margin: 0;
     padding-left: 3%;
@@ -520,15 +512,15 @@ footer {
         padding: 0;
     }
 
-    .user-online li img{
-        width: 100px;
-        height: 100px;
+    .user-online div img{
+        width: 50px;
+        height: 50px;
     }
 
-    .user-online li p{
+    .user-online div p{
         width: 60%;
-        font-size: 3em;
-        line-height: 98px;
+        font-size: 2em;
+        line-height: 48px;
     }
     /*---gameEnd page---*/
     .gameEnd-label{
@@ -540,7 +532,8 @@ footer {
     }
 
     .footer-icon img{
-        width: 40px;
+        width: 49px;
+        height: 34px;
         padding: 0 12px 0 6px;
     }
 
