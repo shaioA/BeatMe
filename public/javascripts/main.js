@@ -72,7 +72,7 @@ $(document).ready(function(){
             $('#user-connected').append('<div userSocketId="'+user.id+'"><img src="../images/userMale.png" /><p>' + user.name+ '</p></div>');
         });
 
-        $('#user-connected li').click(function(){
+        $('#user-connected div').click(function(){
 
             var userSocketId = $(this).attr('userSocketId');
             console.log(userSocketId);
