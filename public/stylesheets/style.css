@@ -535,6 +535,23 @@ footer {
         font-size: 4em;
     }
 
+    .footer-icon{
+        padding: 4px 12px 0 6px;
+    }
+
+    .footer-icon img{
+        width: 40px;
+        padding: 0 12px 0 6px;
+    }
+
+    .coinsfooter{
+        width: 40px;
+        height: 40px;
+    }
+
+    .bottomIconGames:nth-child(3){
+        font-size: 1.75em;
+    }
 }
 
 

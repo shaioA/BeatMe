@@ -165,15 +165,12 @@ $(document).ready(function(){
            socket.emit('gameJoin', {});
        },1100);
 
-
-
-
-
    });
 
 
 
     //game start page
+
     $('input').on('input',function(e){
         console.log('writing: ', $(this).val());
         socket.emit('gameStream', {uuid: gameUuid, inputVal:$(this).val()});
