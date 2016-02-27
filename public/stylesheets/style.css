@@ -175,6 +175,11 @@ footer {
   align-content: center;
 }
 
+.currentGame-top-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .headerGame{
   display: flex;
   flex-direction: row;
@@ -194,12 +199,16 @@ footer {
 .player-container-item{
   align-self: center;
   border: 1px solid #D7DBDD;
-  width: 90px;
-  height: 90px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   box-shadow: -3px 3px 6px #888888;
 }
 
+.shadow-border-red{
+    border: 1px solid red;
+    box-shadow: -3px 3px 6px red;
+}
 .player-number-item{
   align-self: center;
   font-size: 35px;
@@ -212,17 +221,10 @@ footer {
   border: 1px solid blue;
 }
 
-.interactiveLights{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  align-self: center;
-  width: 85%;
-}
-
-.interactiveLights img {
-  align-self: center;
+.phrase-text{
+    width: 85%;
+    align-self: center;
+    border: 1px solid red;
 }
 
 .bottomIconGames{
@@ -512,11 +514,7 @@ footer {
 
    /*---userList page---*/
     .title-userScreen h1 {
-        font-size: 4em;
-    }
-
-    .title-userScreen h3 {
-        font-size: 2em;
+        font-size: 1.75em;
     }
 
     .user-online{
