@@ -13,6 +13,10 @@ var gameUuid = {};
 
 $(document).ready(function(){
 
+    //show login page when loading application
+    $('#loginPage').show();
+    $('header').css('visibility', 'hidden');
+    $('footer').css('visibility', 'hidden');
 
     //animate img
     $('.startPage .splashBeatMe').css('visibility', 'visible');
@@ -21,12 +25,6 @@ $(document).ready(function(){
     setTimeout(function(){
         $('.startPage .splashBeatMe').removeClass('animated bounceIn');
     },1100);
-
-
-    //show login page when loading application
-    $('#loginPage').show();
-    $('header').css('visibility', 'hidden');
-    $('footer').css('visibility', 'hidden');
 
     //connect to the server
     var socket = io.connect();
@@ -126,6 +124,24 @@ $(document).ready(function(){
 
     });
 
+    //listener game TXT responds
+    socket.on('opponentTxt_push', function(game) {
+        console.log(game);
+        $('#opponentTxt').html(game.inputVal);
+
+    });
+
+    socket.on('opponentMistake_push', function(){
+        $('#opponent-player').addClass('shadow-border-red');
+
+        setTimeout(function(){
+            $('#opponent-player').removeClass('shadow-border-red');
+        }, 2000);
+
+        var audio = $("#beepAlert")[0];
+        audio.play();
+    });
+
 
 
     //click on login button display games page
@@ -167,10 +183,7 @@ $(document).ready(function(){
 
    });
 
-
-
     //game start page
-
     $('input').on('input',function(e){
         console.log('writing: ', $(this).val());
         socket.emit('gameStream', {uuid: gameUuid, inputVal:$(this).val()});
@@ -184,12 +197,6 @@ $(document).ready(function(){
 //    });
 
 
-    //listener game TXT responds
-    socket.on('opponentTxt_push', function(game) {
-        console.log(game);
-        $('#opponentTxt').html(game.inputVal);
-
-    });
     //
     //interactive light
     //(function blink() {
