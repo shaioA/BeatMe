@@ -313,6 +313,7 @@ footer {
 
 .title-userScreen h1{
     font-size: 5em;
+    font-weight: 700;
     margin: 0;
     text-align: center;
 }
@@ -337,7 +338,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*margin: 0;*/
+    margin: 0;
 }
 
 /*users list page*/
@@ -346,6 +347,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     margin-bottom: 5px;
+
 }
 
 .user-online li img{
@@ -396,14 +398,40 @@ footer {
 #gameEnd{
     display: none;
     min-height: 80vh;
+    width: 100%;
 }
 
 .gameEnd-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 5em;
+    align-items: center;
     text-align: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.gameEnd-label{
+    color: #000000;
+    font-size: 5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gameEnd-outcome{
+    color: #86969C;
+    font-size: 3em;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.gameEnd-container button{
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #4EBBE4;
+    border: 1px solid #16A2D7;
+    border-radius: 4px;
 }
 /*@media (min-width: 1025px) {*/
 
@@ -481,10 +509,35 @@ footer {
      font-size: 2.75rem;
    }
 
-   /*userList page*/
-    /*.title-userScreen h1 {*/
-        /*font-size: 3em;*/
-    /*}*/
+
+   /*---userList page---*/
+    .title-userScreen h1 {
+        font-size: 4em;
+    }
+
+    .title-userScreen h3 {
+        font-size: 2em;
+    }
+
+    .user-online{
+        padding: 0;
+    }
+
+    .user-online li img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .user-online li p{
+        width: 60%;
+        font-size: 3em;
+        line-height: 98px;
+    }
+    /*---gameEnd page---*/
+    .gameEnd-label{
+        font-size: 4em;
+    }
+
 }
 
 
