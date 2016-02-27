@@ -10,7 +10,7 @@ function Game(uuid, type, users){
     this.winner = undefined;
     this.jackpot = 0;
     this.status = 'init';
-    this.phrase = 'test';
+    this.phrase = 'Design is not just what it looks like and feels like';
     //this.phrase = '"Design is not just what it looks like and feels like. Design is how it works. What a computer is to me is the most remarkable tool that we have ever come up with. Its the equivalent of a bicycle for our minds"';
 
 }
