@@ -56,7 +56,7 @@ Game.prototype.startGame = function(){
 
             // calculate game result
             self.status = 'end';
-            self.winner = self.users[0];
+            self.winner = self.users[Object.keys(self.users)[0]];
 
             // broadcast that game over - and calculate game result
             _.each(self.users,function(user){
@@ -78,14 +78,14 @@ Game.prototype.calculate = function(data,socket){
 
     // update private data
     var currentUser = self.users[socket.id];
-
-
-    // check if somebody win & end the game
-    if(self.saying === self.users[0].txt){
-
-    }else  if(self.saying === self.users[1].txt){
-
-    }
+    //
+    //
+    //// check if somebody win & end the game
+    //if(self.saying === self.users[0].txt){
+    //
+    //}else  if(self.saying === self.users[1].txt){
+    //
+    //}
 
 
     // if not , send a feedback to users (opponent mistakes, rewords, etc... )
