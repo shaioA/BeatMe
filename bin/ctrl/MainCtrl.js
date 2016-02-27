@@ -92,8 +92,8 @@ MainCtrl.prototype.init = function(io){
             if(!self.usersConnected[param.userSocketId]) return false;
 
             var gameUsers = {};
-            gameUsers[socket.id] = {socket: socket};
-            gameUsers[self.usersConnected[param.userSocketId].socket.id] = {socket: self.usersConnected[param.userSocketId].socket};
+            gameUsers[socket.id] = {socket: socket,txt:''};
+            gameUsers[self.usersConnected[param.userSocketId].socket.id] = {socket: self.usersConnected[param.userSocketId].socket,txt:''};
 
             var game = new Game(uuid1, 'speedType', gameUsers );
 
@@ -130,14 +130,14 @@ MainCtrl.prototype.init = function(io){
                 game.calculate(data,socket);
 
                 // action fit to this
-                _.each(game.users,function(user){
-                    console.log('user loop');
-                    //send txt to all opponents
-                    if(user.socket !== socket){
-                        console.log('sending to other your txt');
-                        user.socket.emit('opponentTxt_push',data);
-                    }
-                });
+                //_.each(game.users,function(user){
+                //    console.log('user loop');
+                //    //send txt to all opponents
+                //    if(user.socket !== socket){
+                //        console.log('sending to other your txt');
+                //        user.socket.emit('opponentTxt_push',data);
+                //    }
+                //});
             }
 
         });

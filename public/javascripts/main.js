@@ -90,11 +90,13 @@ $(document).ready(function(){
         $('#timer').html(time);
     });
 
-    socket.on('pickedMember_response',function(uuid){
+    socket.on('pickedMember_response',function(obj){
 
 
         console.log('pickedMember_response!');
-        gameUuid = uuid;
+        gameUuid = obj.uuid;
+
+        $('#phrase-text').html(obj.phrase);
 
         //go to game page
         $('#iconsPage').css('display', 'none');
@@ -109,10 +111,6 @@ $(document).ready(function(){
 
         //$('#gameStart').show();
 
-    });
-
-    socket.on('gameInitData_push',function(gameInitData){
-        $('#sentence').html(gameInitData);
     });
 
     socket.on('gameEnd_push',function(result){
