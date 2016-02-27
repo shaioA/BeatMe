@@ -91,10 +91,11 @@ MainCtrl.prototype.init = function(io){
 
             if(!self.usersConnected[param.userSocketId]) return false;
 
-            var game = new Game(uuid1, 'speedType', [
-                {socket: socket},
-                {socket: self.usersConnected[param.userSocketId].socket}
-            ]);
+            var gameUsers = {};
+            gameUsers[socket.id] = {socket: socket};
+            gameUsers[self.usersConnected[param.userSocketId].socket.id] = {socket: self.usersConnected[param.userSocketId].socket};
+
+            var game = new Game(uuid1, 'speedType', gameUsers );
 
             console.log('user1 sok:',socket);
             console.log('user1 sok:',self.usersConnected[param.userSocketId].socket);
