@@ -395,8 +395,16 @@ footer {
 
 #gameEnd{
     display: none;
+    min-height: 80vh;
 }
 
+.gameEnd-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 5em;
+    text-align: center;
+}
 /*@media (min-width: 1025px) {*/
 
   /*.box {*/

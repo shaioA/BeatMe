@@ -123,7 +123,7 @@ $(document).ready(function(){
         }
 
         $('#gameStart').hide();
-        $('#gameEnd').show();
+        $('#gameEnd').css('display', 'flex');
 
     });
 
