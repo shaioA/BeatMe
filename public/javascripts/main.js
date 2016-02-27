@@ -68,7 +68,7 @@ $(document).ready(function(){
         // populate next screen
         $.each(data.users,function(i, user){
 
-            $('#user-connected').append('<li userSocketId="'+user.id+'"><img src="../images/userMale.png" style="float:left"/><div class="tab" >' + user.name+ '</div></li>');
+            $('#user-connected').append('<li userSocketId="'+user.id+'"><img src="../images/userMale.png" /><p>' + user.name+ '</p></li>');
         });
 
         $('#user-connected li').click(function(){
