@@ -15,6 +15,7 @@ $(document).ready(function(){
 
 
     //animate img
+    $('.startPage .splashBeatMe').css('visibility', 'visible');
     $('.startPage .splashBeatMe').addClass('animated bounceIn');
 
     setTimeout(function(){
