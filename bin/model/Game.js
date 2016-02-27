@@ -46,7 +46,7 @@ Game.prototype.startGame = function(){
 
         // broadcast time
         _.each(self.users,function(user){
-            console.log(self.timer);
+            //console.log(self.timer);
             if(user.socket) {
                 user.socket.emit('timer_push', self.timer);
             }
@@ -109,7 +109,10 @@ Game.prototype.calculate = function(data,socket){
     });
 
     // check if user have a mistake
-    if (self.users[socket.id].txt[self.users[socket.id].txt.length-1] !== self.phrase[self.phrase.length-1])
+    console.log(' self.phrase:', self.phrase);
+    console.log('user char:', self.users[socket.id].txt[self.users[socket.id].txt.length-1]);
+    console.log('phrase char:',self.phrase[self.users[socket.id].txt.length-1]);
+    if (self.users[socket.id].txt[self.users[socket.id].txt.length-1] !== self.phrase[self.users[socket.id].txt.length-1])
     {
         console.log('opponentMistake_push');
 
