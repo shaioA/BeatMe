@@ -94,6 +94,8 @@ $(document).ready(function(){
         console.log('pickedMember_response!');
         gameUuid = obj.uuid;
 
+        //init page
+        $('input').val('');
         $('#phrase-text').html(obj.phrase);
 
         //go to game page
@@ -119,15 +121,9 @@ $(document).ready(function(){
             $('#youWhat').html('You Lost!');
         }
 
+        //change page
         $('#gameStart').hide();
         $('#gameEnd').css('display', 'flex');
-
-    });
-
-    //listener game TXT responds
-    socket.on('opponentTxt_push', function(game) {
-        console.log(game);
-        $('#opponentTxt').html(game.inputVal);
 
     });
 
@@ -184,6 +180,7 @@ $(document).ready(function(){
    });
 
     //game start page
+
     $('input').on('input',function(e){
         console.log('writing: ', $(this).val());
         socket.emit('gameStream', {uuid: gameUuid, inputVal:$(this).val()});

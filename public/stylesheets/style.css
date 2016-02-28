@@ -194,6 +194,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   /*border: 1px solid red;*/
+
 }
 
 .player-container-item{
@@ -293,6 +294,14 @@ footer {
   width: 100%;
 }
 
+.connectedUsers{
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
 .userScreen{
   display: flex;
   min-height: 80vh;
@@ -355,16 +364,10 @@ footer {
     line-height: 129px;
 }
 
-/*#user-connected .tab {*/
-    /*font-size: 57px;*/
-    /*line-height: 129px;*/
-    /*padding-left: 31%;*/
-/*}*/
-
-
 #gameStart{
   display: none;
   width: 100%;
+  min-height: 80vh;
 }
 
 .writeText{
@@ -415,9 +418,16 @@ footer {
 .gameEnd-outcome{
     color: #86969C;
     font-size: 3em;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     text-align: center;
 }
+
+.gameEnd-image img{
+    width:300px;
+    height:300px;
+    margin-bottom: 20px;
+}
+
 
 .gameEnd-container button{
     padding: 10px 20px;
@@ -482,6 +492,7 @@ footer {
 
 /*small screens*/
 @media (max-width: 40em) {
+  /* 40em = 640px */
     .startPage img.fbutton{
         width: 200px;
         height: 41px;
@@ -527,6 +538,11 @@ footer {
         font-size: 4em;
     }
 
+    .gameEnd-image img {
+        width: 250px;
+        height: 250px;
+    }
+
     .footer-icon{
         padding: 4px 12px 0 6px;
     }
@@ -547,6 +563,22 @@ footer {
     }
 }
 
+@media (max-height: 25em) {
+  /*25em = 360px */
+  #gameStart{
+
+    min-height: 90vh;
+  }
+
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+}
 
 
 

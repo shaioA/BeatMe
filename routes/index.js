@@ -6,9 +6,10 @@ router.get('/', function(req, res, next) {
   //console.log('__dirname:',__dirname);
   //res.render('index', { title: 'Express' });
   //res.sendfile('/views/main.html')
-  res.sendFile('main.html', {root: 'c:\\Users\\MS\\WebstormProjects\\BeatMe\\public\\views' });
+  res.sendFile('main.html', {root: 'c:\\Users\\Martha\\WebstormProjects\\BeatMe\\public\\views' });
  //   res.sendFile('main.html', {root: '/webapps/BeatMe/public/views' });
   //res.send('Hello World!');
+    //C:\Users\Martha\WebstormProjects\BeatMe   //path for asus computer
 });
 
 router.get('/getName', function(req, res, next) {
