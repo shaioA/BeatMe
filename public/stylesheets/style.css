@@ -538,9 +538,10 @@ footer {
         font-size: 4em;
     }
 
-    .gameEnd-image img {
+    .gameEnd-image {
         width: 250px;
         height: 250px;
+        margin-bottom: 20px;
     }
 
     .footer-icon{

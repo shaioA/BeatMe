@@ -117,8 +117,10 @@ $(document).ready(function(){
         console.log(result);
         if(result && result === 'win'){
             $('#youWhat').html('You Won!');
+            $('.gameEnd-image').attr('src', '../images/trophy.jpg');
         }else {
             $('#youWhat').html('You Lost!');
+            $('.gameEnd-image').attr('src', '../images/thumbs-down.jpg');
         }
 
         //change page
