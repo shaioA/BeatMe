@@ -181,7 +181,7 @@ footer {
 .chooseGame-label h1 {
     color: #000000;
     text-align: center;
-    font-size: 2.75em;
+    font-size: 1.00em;
     line-height: 64px;
     margin: 0 auto;
 }
@@ -317,6 +317,8 @@ footer {
 .phrase-text{
     width: 85%;
     align-self: center;
+    font-size: 1.75em;
+    margin-top: 4%;
 }
 
 .bottomIconGames{
