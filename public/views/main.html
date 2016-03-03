@@ -43,47 +43,53 @@
         Your browser isn't invited for super fun audio time.
     </audio>
     <div class="mainBody">
-        <header>
-            <div class="   ">
-                <div class="username" >Alex</div>
-                <ul>
-                    <li>$100</li>
-                    <li class="coinsIcon"></li>
-                </ul>
+        <header class="top-label">
+            <div class="top-label-section">
+                <div class="top-label-item">Alex</div>
+            </div>
+            <div class="top-label-section" >
+                <div class="top-label-item">$100</div>
+                <div class="top-label-item coinsIcon"></div>
             </div>
         </header>
 
 
 
             <!--Login page FLEX-->
-            <div id="loginPage" class="startPage">
+        <div id="loginPage" class="startPage">
                    <img class="splashBeatMe" src="../images/beatMeSplashImg.jpg">
-                    <img class="fbutton" src="../images/fbconnect.png" style="margin: 0 auto;" />
+                    <img class="fbutton" src="../images/fbconnect.png" />
             </div>
 
             <!--Games page-->
-            <div id="iconsPage" class="chooseGame">
+        <div id="iconsPage" class="chooseGame">
+                <div class="chooseGame-label">
                     <h1>Choose your game</h1>
-                        <div class="flex-container">
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                            <div class="flex-item"><img data-game="speedTyping" src="../images/icons_beatme_type.png"></div>
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                        </div>
-                        <div class="flex-container">
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
-                        </div>
-                        <div class="flex-container">
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
-                            <div class="flex-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                        </div>
+                </div>
+                <div class="chooseGame-box">
+                    <div class="iconGame-row">
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                        <div class="iconGame-item"><img data-game="speedTyping" src="../images/icons_beatme_type.png"></div>
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                    </div>
+                    <div class="iconGame-row">
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
+                    </div>
+                    <div class="iconGame-row">
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
+                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                    </div>
+                </div>
 
             </div>
 
+
+
             <!-- Game Type Page-->
-            <div id="rulesGame" >
+        <div id="rulesGame" >
                     <div class="flex-header">
                         <img id="pic-game" class="rules-item rule-flex1"  src="../images/speedometer_64.png"/>
                         <h1 id="title-game" class="rules-item rule-flex2">Speed typing</h1>
@@ -99,7 +105,7 @@
             </div>
 
             <!-- Game Users List-->
-            <div id="userList" class="userScreen">
+        <div id="userList" class="userScreen">
                     <div class="title-userScreen">
                         <!--<img id="pic-game1" src="../images/green_icon.png"/>-->
                         <h1>Choose Your opponent</h1>
@@ -111,15 +117,13 @@
                         <!--<div>Train</div>-->
                         <!--<div>Play</div>-->
 
-                        <br />
-                        <br />
 
-                        <div class="jumpPage">go to game page(develop only)</div>
+                        <!--<div class="jumpPage">go to game page(develop only)</div>-->
                     </div>
             </div>
 
             <!--Game Begin -->
-            <div id="gameStart" class="currentGame">
+        <div id="gameStart" class="currentGame">
                 <div class="currentGame-top-container">
                     <div class="headerGame">
                         <div  class="player-container">
@@ -147,7 +151,7 @@
             </div>
 
             <!-- Game End-->
-            <div id="gameEnd"  class=" ">
+        <div id="gameEnd"  class=" ">
                 <div class="gameEnd-container">
                     <!--<div class="gameEnd-label">-= GAME OVER =-</div>-->
                         <div id="youWhat" class="gameEnd-outcome">You </div>
@@ -156,13 +160,8 @@
                 </div>
             </div>
 
-
-
-
-        <footer>
-           <div>
-               <div>BeatMe copyrights</div>
-           </div>
+        <footer class="bottom-label">
+            <div>BeatMe copyrights</div>
          </footer>
 
     </div>

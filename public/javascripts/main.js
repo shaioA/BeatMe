@@ -103,13 +103,14 @@ $(document).ready(function(){
         $('#rulesGame').css('display', 'none');
         $('#userList').css('display', 'none');
 
+        //initialize picture of player
+        //myPic
+        $('#me-player').append('<img class="player-pic" src="'+ 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xla1/v/t1.0-1/p160x160/12342457_1068384489862996_7404266880326277089_n.jpg?oh=1685574288b23f5748bd1d95d7f2ef11&amp;oe=5763D439&amp;__gda__=1466471260_20f9520dd01b89640d0f4235e9a033b8' +'"/>');
+        //opponentPic
+        $('#opponent-player').append('<img class="player-pic" src="'+ 'https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12122855_1228257603866478_3503046080423066573_n.jpg?oh=ce337adb3209653795f760c76d580294&amp;oe=57549347' +'"/>');
+
+        // show page
         $('#gameStart').css('display', 'flex');
-
-        //$('#iconsPage').hide();
-        //$('#rulesGame').hide();
-        //$('#userList').hide();
-
-        //$('#gameStart').show();
 
     });
 
@@ -153,15 +154,15 @@ $(document).ready(function(){
         $('#iconsPage').css('display', 'flex');
         $('#gameEnd').hide();
     });
-
-    //for develop purposes ONLY (Martha)
-    $('.jumpPage').click(function(){
-        $('#userList').css('display', 'none');
-        $('#gameStart').css('display', 'flex');
-    });
+    //
+    ////for develop purposes ONLY (Martha)
+    //$('.jumpPage').click(function(){
+    //    $('#userList').css('display', 'none');
+    //    $('#gameStart').css('display', 'flex');
+    //});
 
    //go to the game page
-   $('.flex-item').click(function(e) {
+   $('.iconGame-item').click(function(e) {
 
        var game = $(this).attr('data-game');
         //if (!game) return false;
@@ -174,7 +175,7 @@ $(document).ready(function(){
 
        setTimeout(function(){
            //$(this).removeClass('animated flipInY');
-           $('.flex-item.animated.flipInY').removeClass('animated flipInY');
+           $('.iconGame-item.animated.flipInY').removeClass('animated flipInY');
            //start game
            socket.emit('gameJoin', {});
        },1100);

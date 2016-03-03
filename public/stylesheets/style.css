@@ -66,7 +66,7 @@ header  {
   /*border: 1px solid blue;*/
   min-height: 10vh;
   align-self: stretch;
-  flex: 1 2 auto;
+  /*flex: 1 2 auto;*/
     background: -moz-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,128,128,1)), color-stop(100%, rgba(176,255,252,1))); /* safari4+,chrome */
     background: -webkit-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
@@ -80,7 +80,7 @@ footer {
   /*border: 1px solid black;*/
   min-height: 10vh;
   align-self: stretch;
-  flex: 1 2 auto;
+  /*flex: 1 2 auto;*/
     background: rgba(224,239,249,1);
     background: -moz-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(224,239,249,1)), color-stop(50%, rgba(216,225,231,1)), color-stop(73%, rgba(181,198,208,1)), color-stop(100%, rgba(242,246,248,1)));
@@ -91,6 +91,42 @@ footer {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#f2f6f8', GradientType=0 );
 }
 
+/*header elements*/
+.top-label{
+   display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.top-label-section{
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.top-label-item{
+    padding: 5px 15px;
+    font-size: 1.5em;
+}
+
+.coinsIcon{
+    background: url('../images/coins_header.png') no-repeat;
+    padding: 19px 19px;
+}
+
+/*footer elements*/
+.bottom-label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/*start page, login or connect to facebook*/
 .startPage {
   /*border: 1px solid green;*/
   min-height: 80vh;
@@ -110,63 +146,113 @@ footer {
 .startPage img.fbutton{
   width: 500px;
   height: 105px;
+    margin: 0 auto;
 }
 
 .startPage .splashBeatMe{
     /*visibility: hidden;*/
 }
 
-/*Games page*/
+/*All Games page*/
 #iconsPage {
   display: none;
+    min-height: 80vh;
+    width:100%;
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*flex: 3 2 auto;*/
+}
+
+.chooseGame {
+    min-height: 80vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 3 2 auto;
+    align-content: center;
 }
 
-#iconsPage .chooseGame {
-  /*align-self: center;*/
-  min-height: 80vh;
+.chooseGame-label{
+    /*border: 1px solid green;*/
+    width: 90%;
+    margin: 0 auto;
+    min-height: 10vh;
+}
+
+.chooseGame-label h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 2.75em;
+    line-height: 64px;
+    margin: 0 auto;
+}
+
+.chooseGame-box{
+    /*border: 1px solid blue;*/
+    width: 90%;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+.iconGame-row{
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid greenyellow;*/
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-height: 23vh;
+}
+
+.iconGame-item{
+    /*border: 1px solid orange;*/
+}
+
+.iconGame-item img{
+    width: 125px;
+    height: 125px;
+}
+    /*#iconsPage .chooseGame {*/
+      /*align-self: center;*/
+      /*min-height: 80vh;*/
+      /*display: flex;*/
+      /*flex-direction:row;*/
+      /*justify-content: space-around;*/
+      /*flex: 3 2 auto;*/
+      /*}*/
+      /*display: -webkit-box;*/
+      /*display: -moz-box;*/
+      /*display: -ms-flexbox;*/
+      /*display: -webkit-flex;*/
+      /*display: flex;*/
+
+      /*-webkit-flex-flow: row nowrap;*/
+      /*justify-content: space-around;*/
+    /*}*/
+
+
+
+/*.chooseGame .flex-container {*/
   /*display: flex;*/
-  /*flex-direction:row;*/
-  /*justify-content: space-around;*/
-  /*flex: 3 2 auto;*/
-  /*}*/
-  /*display: -webkit-box;*/
-  /*display: -moz-box;*/
-  /*display: -ms-flexbox;*/
-  /*display: -webkit-flex;*/
-  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*align-items: center;*/
+  /*align-content: center;*/
+  /*justify-content: center;*/
+    /*width: 85%;*/
+    /*margin: 0 auto;*/
+/*}*/
 
-  /*-webkit-flex-flow: row nowrap;*/
-  /*justify-content: space-around;*/
-}
+/*.flex-item{*/
+  /*align-items: center;*/
+ /*}*/
 
-#iconsPage .chooseGame h1 {
-  color: #000000;
-  text-align: center;
-  font-size: 4em;
-}
-
-#iconsPage .flex-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-.flex-item{
-  align-items: center;
- }
-
-.flex-item img{
+/*.flex-item img{*/
   /*padding: 30px 10px;*/
-  cursor: pointer;
+  /*cursor: pointer;*/
   /*width: 300px;*/
-  border-style: none;
-}
+  /*border-style: none;*/
+/*}*/
 
+/*page when a game start */
 .currentGame{
   min-height: 80vh;
   display: flex;
@@ -199,11 +285,17 @@ footer {
 
 .player-container-item{
   align-self: center;
-  border: 1px solid #D7DBDD;
-  width: 40px;
-  height: 40px;
+  border: 0px solid #D7DBDD;
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
   box-shadow: -3px 3px 6px #888888;
+}
+/*picture from fb*/
+.player-pic{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
 }
 
 .shadow-border-red{
@@ -289,7 +381,7 @@ footer {
 
 /*user connected*/
 #userList{
-    display: none;
+  display: none;
   min-height: 80vh;
   width: 100%;
 }
@@ -313,19 +405,19 @@ footer {
 
 .title-userScreen{
   min-height: 10vh;
-    width:85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-self: center;
-    /*border: 1px solid green;*/
+  width:85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+  /*border: 1px solid green;*/
 }
 
 .title-userScreen h1{
-    font-size: 4em;
-    font-weight: 700;
-    margin: 0;
-    text-align: center;
+   font-size: 4em;
+   font-weight: 700;
+   margin: 0;
+   text-align: center;
 }
 
 .currentUsers{
@@ -494,8 +586,8 @@ footer {
 @media (max-width: 40em) {
   /* 40em = 640px */
     .startPage img.fbutton{
-        width: 200px;
-        height: 41px;
+        width: 230px;
+        height: 55px;
     }
 
     .startPage img.splashBeatMe{
@@ -504,10 +596,10 @@ footer {
     }
 
 
-   #iconsPage .flex-item img{
-       width: 100px;
-       height: 100px;
-    }
+   /*#iconsPage .flex-item img{*/
+       /*width: 100px;*/
+       /*height: 100px;*/
+    /*}*/
 
    .wordBox{
      font-size: 2.75rem;
@@ -570,12 +662,13 @@ footer {
 
     min-height: 90vh;
   }
-
-  header {
+    /*header*/
+  .top-label {
     display: none;
   }
 
-  footer {
+  /*footer */
+  .bottom-label{
     display: none;
   }
 
