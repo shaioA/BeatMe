@@ -383,7 +383,7 @@ footer {
 /*user connected*/
 #userList{
   display: none;
-  min-height: 80vh;
+  min-height: 30vh;
   width: 100%;
 }
 
