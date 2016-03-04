@@ -13,6 +13,8 @@ var gameUuid = {};
 
 $(document).ready(function(){
 
+    // martush -> please encapsulate those init app actions in a function (always in programing you want to encapsulate as you can)
+
     //show login page when loading application
     $('#loginPage').show();
     $('header').css('visibility', 'hidden');
@@ -26,12 +28,13 @@ $(document).ready(function(){
         $('.startPage .splashBeatMe').removeClass('animated bounceIn');
     },1100);
 
+
+    // martush -> please encapsulate those socket actions in a obj/class
+
     //connect to the server
     var socket = io.connect();
 
-
-
-    // socket listener
+    // socket listeners (Server push msgs)
     socket.on('login123_response',function(data){
         console.log(data);
 
@@ -44,8 +47,6 @@ $(document).ready(function(){
             $('footer').css('visibility', 'visible');
         }
     });
-
-    //listener game type responds
     socket.on('gametype_response', function(game) {
     // getting obj : title, text(arr), icon name
 
@@ -58,7 +59,7 @@ $(document).ready(function(){
 
 
     });
-
+    //listener game type responds - User picked hit a Game Icon
     socket.on('gameJoin_response',function(data){
 
         gameUuid = data.uuid;
@@ -88,10 +89,9 @@ $(document).ready(function(){
         $('#timer').html(time);
     });
 
+
     socket.on('pickedMember_response',function(obj){
 
-
-        console.log('pickedMember_response!');
         gameUuid = obj.uuid;
 
         //init page
@@ -104,10 +104,13 @@ $(document).ready(function(){
         $('#userList').css('display', 'none');
 
         //initialize picture of player
-        //myPic
-        $('#me-player').append('<img class="player-pic" src="'+ 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xla1/v/t1.0-1/p160x160/12342457_1068384489862996_7404266880326277089_n.jpg?oh=1685574288b23f5748bd1d95d7f2ef11&amp;oe=5763D439&amp;__gda__=1466471260_20f9520dd01b89640d0f4235e9a033b8' +'"/>');
-        //opponentPic
-        $('#opponent-player').append('<img class="player-pic" src="'+ 'https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12122855_1228257603866478_3503046080423066573_n.jpg?oh=ce337adb3209653795f760c76d580294&amp;oe=57549347' +'"/>');
+        var myPic = '../images/brie.jpg';
+        $('#me-player').append('<img class="player-pic" src="'+ myPic +'"/>');
+        //$('#me-player').css('background', 'url('+ myPic + ') center center no-repeat');
+        var opponentPic = '../images/ryan.jpg';
+
+        $('#opponent-player').append('<img class="player-pic" src="'+ opponentPic +'"/>');
+        //$('#opponent-player').css('background', 'url('+ opponentPic + ') center center no-repeat');
 
         // show page
         $('#gameStart').css('display', 'flex');
@@ -143,23 +146,18 @@ $(document).ready(function(){
 
 
 
-    //click on login button display games page
+    // button - click on login button display games page
    $('.startPage img').click(function() {
        socket.emit('login123',{user:'shai',pwd:'robinzon'});
        });
 
+    // button - after game is over, clicking will navigate you to games list page
     $('#BackToGames').click(function() {
 //        $('#iconsPage').show();
 
         $('#iconsPage').css('display', 'flex');
         $('#gameEnd').hide();
     });
-    //
-    ////for develop purposes ONLY (Martha)
-    //$('.jumpPage').click(function(){
-    //    $('#userList').css('display', 'none');
-    //    $('#gameStart').css('display', 'flex');
-    //});
 
    //go to the game page
    $('.iconGame-item').click(function(e) {
@@ -183,21 +181,11 @@ $(document).ready(function(){
    });
 
     //game start page
-
     $('input').on('input',function(e){
         console.log('writing: ', $(this).val());
         socket.emit('gameStream', {uuid: gameUuid, inputVal:$(this).val()});
     });
 
-    //listener game type responds
-//    socket.on('opponent_response', function(game) {
-//
-//        $('#opponentTxt').html(game.opponentTxt);
-//
-//    });
-
-
-    //
     //interactive light
     //(function blink() {
     //    $('.blink').fadeOut(500).fadeIn(500, blink);
