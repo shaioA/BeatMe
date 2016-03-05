@@ -198,7 +198,7 @@ footer {
     /*border: 1px solid greenyellow;*/
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 23vh;
 }
 
@@ -207,8 +207,8 @@ footer {
 }
 
 .iconGame-item img{
-    width: 125px;
-    height: 125px;
+    width: 90px;
+    height: 90px;
 }
     /*#iconsPage .chooseGame {*/
       /*align-self: center;*/
@@ -454,7 +454,7 @@ footer {
     margin: 0;
     padding-left: 3%;
     font-size: 4em;
-    line-height: 129px;
+    line-height: 88px;
 }
 
 #gameStart{
@@ -617,14 +617,14 @@ footer {
     }
 
     .user-online div img{
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
 
     .user-online div p{
         width: 60%;
         font-size: 2em;
-        line-height: 48px;
+        line-height: 88px;
     }
     /*---gameEnd page---*/
     .gameEnd-label{
