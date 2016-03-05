@@ -17,13 +17,15 @@ html,
 body {
   margin: 0;
   padding: 0;
+    height: 100%;
+
 }
 
 body {
   font: 14px "Lato", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-
+    height: 100%;
 }
 
 a {
@@ -39,27 +41,14 @@ img {
 }
 
 .mainBody{
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-
+  justify-content: space-between;
+    flex-direction: column;
   font-weight: bold;
+    height: 100%;
 }
 header  {
   /*border: 1px solid blue;*/
@@ -128,7 +117,7 @@ footer {
 /*start page, login or connect to facebook*/
 .startPage {
   /*border: 1px solid green;*/
-  min-height: 80vh;
+  /*min-height: 80vh;*/
   display: flex;
   flex-direction:column;
   justify-content: space-around;
@@ -155,7 +144,7 @@ footer {
 /*All Games page*/
 #iconsPage {
   display: none;
-    min-height: 80vh;
+    /*min-height: 80vh;*/
     width:100%;
     /*flex-direction: column;*/
     /*justify-content: center;*/
@@ -163,7 +152,7 @@ footer {
 }
 
 .chooseGame {
-    min-height: 80vh;
+    /*min-height: 80vh;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,7 +178,7 @@ footer {
     /*border: 1px solid blue;*/
     width: 90%;
     margin: 0 auto;
-    min-height: 70vh;
+    /*min-height: 70vh;*/
 }
 
 .iconGame-row{
@@ -253,7 +242,7 @@ footer {
 
 /*page when a game start */
 .currentGame{
-  min-height: 80vh;
+  /*min-height: 80vh;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -323,7 +312,7 @@ footer {
 .bottomIconGames{
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-self: center;
   width: 85%;
 }
@@ -331,6 +320,8 @@ footer {
 .footer-icon{
   align-self: center;
   padding: 0 12px 0 12px;
+    font-size: 1.5em;
+    color: #9D9D00;
 }
 
 .coinsfooter{
@@ -340,6 +331,7 @@ footer {
   height: 64px;
   border-radius: 100%;
   box-shadow: -3px 3px 6px #888888;
+    float: right;
 }
 
 .bottomIconGames:nth-child(3){
@@ -384,10 +376,11 @@ footer {
 #userList{
   display: none;
   width: 100%;
+    height: 100%;
 }
 
 .connectedUsers{
-  min-height: 80vh;
+  /*min-height: 80vh;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -396,7 +389,7 @@ footer {
 
 .userScreen{
   display: flex;
-  min-height: 80vh;
+  /*min-height: 80vh;*/
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
@@ -421,7 +414,7 @@ footer {
 }
 
 .currentUsers{
-  min-height: 60vh;
+  /*min-height: 60vh;*/
     width:85%;
     display: flex;
     flex-direction: column;
@@ -459,7 +452,8 @@ footer {
 #gameStart{
   display: none;
   width: 100%;
-  min-height: 80vh;
+    height: 100%;
+  /*min-height: 80vh;*/
 }
 
 .writeText{
@@ -485,7 +479,7 @@ footer {
 
 #gameEnd{
     display: none;
-    min-height: 80vh;
+    /*min-height: 80vh;*/
     width: 100%;
 }
 
@@ -593,6 +587,7 @@ footer {
     .startPage img.splashBeatMe{
         width: 300px;
         height: 300px;
+        align-self: center;
     }
 
 
@@ -660,7 +655,7 @@ footer {
   /*25em = 360px */
   #gameStart{
 
-    min-height: 90vh;
+    /*min-height: 90vh;*/
   }
     /*header*/
   .top-label {

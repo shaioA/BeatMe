@@ -17,17 +17,17 @@
     <link rel="stylesheet" text="text/css" href="../stylesheets/style.css">
     <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/javascripts/main.js" />
+    <script src="/javascripts/main.js"/>
 
     <!--google fonts-->
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <script>
-//        var socket = io.connect();
-//        socket.on('news', function (data) {
-//            console.log(data);
-//            socket.emit('my other event', { my: 'data' });
-//        });
+        //        var socket = io.connect();
+        //        socket.on('news', function (data) {
+        //            console.log(data);
+        //            socket.emit('my other event', { my: 'data' });
+        //        });
 
     </script>
     <meta charset="UTF-8">
@@ -36,141 +36,143 @@
     <title>BeatMe!</title>
 </head>
 <body>
-    <!--sounds-->
-    <audio id="beepAlert">
-        <source src="../audio/beep.mp3"></source> <!--(WebKit and IE)-->
-        <!--<source src="audio/beep.ogg"></source> &lt;!&ndash;(Firefox and Opera)&ndash;&gt;-->
-        Your browser isn't invited for super fun audio time.
-    </audio>
-    <div class="mainBody">
-        <header class="top-label">
-            <div class="top-label-section">
-                <div class="top-label-item">Alex</div>
+<!--sounds-->
+<audio id="beepAlert">
+    <source src="../audio/beep.mp3"></source>
+    <!--(WebKit and IE)-->
+    <!--<source src="audio/beep.ogg"></source> &lt;!&ndash;(Firefox and Opera)&ndash;&gt;-->
+    Your browser isn't invited for super fun audio time.
+</audio>
+<div class="mainBody">
+    <header class="top-label">
+        <div class="top-label-section">
+            <div class="top-label-item">Alex</div>
+        </div>
+        <div class="top-label-section">
+            <div class="top-label-item">$100</div>
+            <div class="top-label-item coinsIcon"></div>
+        </div>
+    </header>
+
+
+    <!--Login page FLEX-->
+    <div id="loginPage" class="startPage">
+        <img class="splashBeatMe" src="../images/beatMeSplashImg.jpg">
+        <img class="fbutton" src="../images/fbconnect.png"/>
+    </div>
+
+    <!--Games page-->
+    <div id="iconsPage" class="chooseGame">
+        <div class="chooseGame-label">
+            <h1>Choose your game</h1>
+        </div>
+        <div class="chooseGame-box">
+            <div class="iconGame-row">
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                <div class="iconGame-item"><img data-game="speedTyping" src="../images/icons_beatme_type.png"></div>
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
             </div>
-            <div class="top-label-section" >
-                <div class="top-label-item">$100</div>
-                <div class="top-label-item coinsIcon"></div>
+            <div class="iconGame-row">
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
             </div>
-        </header>
-
-
-
-            <!--Login page FLEX-->
-        <div id="loginPage" class="startPage">
-                   <img class="splashBeatMe" src="../images/beatMeSplashImg.jpg">
-                    <img class="fbutton" src="../images/fbconnect.png" />
+            <div class="iconGame-row">
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
+                <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
             </div>
-
-            <!--Games page-->
-        <div id="iconsPage" class="chooseGame">
-                <div class="chooseGame-label">
-                    <h1>Choose your game</h1>
-                </div>
-                <div class="chooseGame-box">
-                    <div class="iconGame-row">
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                        <div class="iconGame-item"><img data-game="speedTyping" src="../images/icons_beatme_type.png"></div>
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                    </div>
-                    <div class="iconGame-row">
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
-                    </div>
-                    <div class="iconGame-row">
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_type.png"></div>
-                        <div class="iconGame-item"><img data-game="" src="../images/icons_beatme_yellow.png"></div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <!-- Game Type Page-->
-        <div id="rulesGame" >
-                    <div class="flex-header">
-                        <img id="pic-game" class="rules-item rule-flex1"  src="../images/speedometer_64.png"/>
-                        <h1 id="title-game" class="rules-item rule-flex2">Speed typing</h1>
-                    </div>
-                    <ul id="descrip-game">
-                        <li>hola</li>
-                        <li>alkfakaf</li>
-                        <li>hola</li>
-                        <li>alkfakaf</li>
-                    </ul>
-                    <div>Train</div>
-                    <div>Play</div>
-            </div>
-
-            <!-- Game Users List-->
-        <div id="userList" class="userScreen">
-                    <div class="title-userScreen">
-                        <!--<img id="pic-game1" src="../images/green_icon.png"/>-->
-                        <!--<h1>Choose Your opponent</h1>-->
-                    </div>
-                    <div class="currentUsers">
-                        <div id="user-connected" class="user-online">
-
-                        </div>
-                        <!--<div>Train</div>-->
-                        <!--<div>Play</div>-->
-
-
-                        <!--<div class="jumpPage">go to game page(develop only)</div>-->
-                    </div>
-            </div>
-
-            <!--Game Begin -->
-        <div id="gameStart" class="currentGame">
-                <div class="currentGame-top-container">
-                    <div class="headerGame">
-                        <div  class="player-container">
-                            <div id="me-player" class="player-container-item"></div>
-                            <!--<div class="player-number-item">3</div>-->
-                        </div>
-                        <div class="player-container">
-                            <div id="opponent-player" class="player-container-item"></div>
-                            <!--<div class="player-number-item  ">1</div>-->
-                        </div>
-                    </div>
-                    <div id="phrase-text" class="phrase-text">
-
-                    </div>
-                </div>
-                <div class="writeText">
-
-                    <input type="text" name="word" class="wordBox">
-                </div>
-                <div class="bottomIconGames">
-
-                    <!--<div class="footer-icon"><img src="../images/speedometer_64.png"></div>-->
-                    <div id="timer" style="font-size: 35px;font-weight: bold"></div>
-                    <div class="footer-icon coinsfooter"><img src="../images/coins_yellow.jpg" style="height:40px;width:40px"></div>
-                    <div class="footer-icon">3$</div>
-
-
-                </div>
-            </div>
-
-            <!-- Game End-->
-        <div id="gameEnd"  class=" ">
-                <div class="gameEnd-container">
-                    <!--<div class="gameEnd-label">-= GAME OVER =-</div>-->
-                        <div id="youWhat" class="gameEnd-outcome">You </div>
-                        <img class="gameEnd-image" src=" " >
-                        <button id="BackToGames">Back To Games</button>
-                </div>
-            </div>
-
-        <footer class="bottom-label">
-            <div>BeatMe copyrights</div>
-         </footer>
+        </div>
 
     </div>
 
 
+    <!-- Game Type Page-->
+    <div id="rulesGame">
+        <div class="flex-header">
+            <img id="pic-game" class="rules-item rule-flex1" src="../images/speedometer_64.png"/>
+
+            <h1 id="title-game" class="rules-item rule-flex2">Speed typing</h1>
+        </div>
+        <ul id="descrip-game">
+            <li>hola</li>
+            <li>alkfakaf</li>
+            <li>hola</li>
+            <li>alkfakaf</li>
+        </ul>
+        <div>Train</div>
+        <div>Play</div>
+    </div>
+
+    <!-- Game Users List-->
+    <div id="userList" class="userScreen">
+        <div class="title-userScreen">
+            <!--<img id="pic-game1" src="../images/green_icon.png"/>-->
+            <!--<h1>Choose Your opponent</h1>-->
+        </div>
+        <div class="currentUsers">
+            <div id="user-connected" class="user-online">
+
+            </div>
+            <!--<div>Train</div>-->
+            <!--<div>Play</div>-->
+
+
+            <!--<div class="jumpPage">go to game page(develop only)</div>-->
+        </div>
+    </div>
+
+    <!--Game Begin -->
+    <div id="gameStart" class="currentGame">
+        <div class="currentGame-top-container">
+            <div class="headerGame">
+                <div class="player-container">
+                    <div id="me-player" class="player-container-item"></div>
+                    <!--<div class="player-number-item">3</div>-->
+                </div>
+                <div class="player-container">
+                    <div id="opponent-player" class="player-container-item"></div>
+                    <!--<div class="player-number-item  ">1</div>-->
+                </div>
+            </div>
+            <div id="phrase-text" class="phrase-text">
+
+            </div>
+        </div>
+        <div class="writeText">
+
+            <input type="text" name="word" class="wordBox">
+        </div>
+        <div class="bottomIconGames">
+
+            <!--<div class="footer-icon"><img src="../images/speedometer_64.png"></div>-->
+            <div id="timer" style="font-size: 35px;font-weight: bold"></div>
+            <div>
+                <div class="footer-icon" style="float: left">99</div>
+
+                <div class="footer-icon coinsfooter"><img src="../images/coins_yellow.jpg" style="height:40px;width:40px">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Game End-->
+    <div id="gameEnd" class=" ">
+        <div class="gameEnd-container">
+            <!--<div class="gameEnd-label">-= GAME OVER =-</div>-->
+            <div id="youWhat" class="gameEnd-outcome">You</div>
+            <img class="gameEnd-image" src=" ">
+            <button id="BackToGames">Back To Games</button>
+        </div>
+    </div>
+
+    <footer class="bottom-label">
+        <div>BeatMe copyrights</div>
+    </footer>
+
+</div>
 
 
 </body>
