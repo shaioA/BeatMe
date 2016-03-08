@@ -7,6 +7,11 @@ html {
   -moz-box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   font-size: 100%;
+    /*/prevent copy web text*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 *, *:before, *:after {
@@ -39,6 +44,13 @@ ul {
 img {
   border-style: none;
 }
+
+
+
+.row-of-icons {
+
+}
+
 
 .mainBody{
   /*min-height: 100vh;*/
@@ -285,6 +297,7 @@ footer {
     width: 80px;
     height: 80px;
     border-radius: 100%;
+
 }
 
 .shadow-border-red{
@@ -316,24 +329,24 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
-  width: 85%;
+  width: 92%;
 }
 
 .footer-icon{
   align-self: center;
-  padding: 0 12px 0 12px;
+  /*padding: 0 12px 0 12px;*/
     font-size: 1.5em;
     color: #9D9D00;
 }
 
 .coinsfooter{
-  align-self: center;
-  border: 1px solid #D7DBDD;
-  width: 64px;
-  height: 64px;
-  border-radius: 100%;
-  box-shadow: -3px 3px 6px #888888;
-    float: right;
+    align-self: center;
+    /* border: 1px solid #D7DBDD; */
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    /* box-shadow: -3px 3px 6px #888888; */
+    float: left;
 }
 
 .bottomIconGames:nth-child(3){
@@ -640,7 +653,7 @@ footer {
     .footer-icon img{
         width: 49px;
         height: 34px;
-        padding: 0 12px 0 6px;
+        /*padding: 0 12px 0 6px;*/
     }
 
     .coinsfooter{

@@ -1,7 +1,6 @@
 var _ = require('lodash');
 var phrases = require('./phrases');
 
-
 function Game(uuid, type, users){
     this.type = type;
     this.uuid = uuid;
@@ -15,8 +14,6 @@ function Game(uuid, type, users){
 
    }
 
-
-
 Game.prototype.startGame = function(){
     var self = this;
 
@@ -26,6 +23,8 @@ Game.prototype.startGame = function(){
         console.log(self.timer);
         if(user.socket) {
             console.log('sending to members that game starting , and they need to switch page');
+            // init users
+            user.isPlayingNow = true;
             // broadcast the sentence
             user.socket.emit('pickedMember_response', {uuid:self.uuid,phrase:self.phrase});
         }
@@ -63,17 +62,24 @@ Game.prototype.startGame = function(){
 
             // broadcast that game over - and calculate game result
             _.each(self.users,function(user){
-                if(user.socket == self.winner.socket) {
-                    user.socket.emit('gameEnd_push', 'win');
-                }else{
-                    user.socket.emit('gameEnd_push', 'lost');
-                }
+               self.gameOver(user);
             });
 
             clearInterval(self.invervalTimer);
         }
 
     },1000);
+};
+
+Game.prototype.gameOver = function(user) {
+    var self = this;
+
+    if(user.socket == self.winner.socket) {
+        user.socket.emit('gameEnd_push', 'win');
+    }else{
+        user.socket.emit('gameEnd_push', 'lost');
+    }
+    user.isPlayingNow = false;
 };
 
 Game.prototype.calculate = function(data,socket){
@@ -91,6 +97,7 @@ Game.prototype.calculate = function(data,socket){
     _.each(self.users,function(user){
 
         if(!self.winner && user.txt === self.phrase) {
+
             // we have a winner!
             self.status = 'end';
             clearInterval(self.invervalTimer);
@@ -98,11 +105,7 @@ Game.prototype.calculate = function(data,socket){
 
             // broadcast that game over - and calculate game result
             _.each(self.users,function(user){
-                if(user.socket == self.winner.socket) {
-                    user.socket.emit('gameEnd_push', 'win');
-                }else{
-                    user.socket.emit('gameEnd_push', 'lost');
-                }
+                self.gameOver(user);
             });
         }
 

@@ -2,6 +2,7 @@
  * Created by Benr on 2/2/2016.
  */
 var Game = require('./../model/Game.js');
+var User = require('./../model/User.js');
 var _ = require('lodash');
 var uuid = require('node-uuid');
 
@@ -15,6 +16,7 @@ MainCtrl.prototype.init = function(io){
     var self = this;
 
     io.on('connection', function (socket) {
+
         console.log('new user connection !',socket.id);
 
         // LOGIN
@@ -71,7 +73,7 @@ MainCtrl.prototype.init = function(io){
             var userToClient = [];
             _.each(self.usersConnected,function(key, val){
                 console.log(key.name,key.socketId );
-                if( socket.id != key.socketId){
+                if( socket.id != key.socketId && !val.isPlayingNow){
                     userToClient.push({name: key.name,id:key.socketId});
                 }
             });
@@ -92,8 +94,8 @@ MainCtrl.prototype.init = function(io){
             if(!self.usersConnected[param.userSocketId]) return false;
 
             var gameUsers = {};
-            gameUsers[socket.id] = {socket: socket,txt:''};
-            gameUsers[self.usersConnected[param.userSocketId].socket.id] = {socket: self.usersConnected[param.userSocketId].socket,txt:''};
+            gameUsers[socket.id] = new User(socket); //{socket: socket,txt:''};
+            gameUsers[self.usersConnected[param.userSocketId].socket.id] = new User(self.usersConnected[param.userSocketId].socket,{}); //{socket: self.usersConnected[param.userSocketId].socket,txt:''};
 
             var game = new Game(uuid1, 'speedType', gameUsers );
 

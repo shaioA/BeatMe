@@ -97,6 +97,7 @@ $(document).ready(function(){
         //init page
         $('input').val('');
         $('#phrase-text').html(obj.phrase);
+        //$('#me-player').html('');
 
         //go to game page
         $('#iconsPage').css('display', 'none');
@@ -105,15 +106,25 @@ $(document).ready(function(){
 
         //initialize picture of player
         var myPic = '../images/brie.jpg';
-        $('#me-player').append('<img class="player-pic" src="'+ myPic +'"/>');
+        $('#me-player').empty().append('<img class="player-pic" src="'+ myPic +'"  />');
+
+
+
+
         //$('#me-player').css('background', 'url('+ myPic + ') center center no-repeat');
         var opponentPic = '../images/ryan.jpg';
 
-        $('#opponent-player').append('<img class="player-pic" src="'+ opponentPic +'"/>');
+        $('#opponent-player').empty().append('<img class="player-pic" src="'+ opponentPic +'"/>');
         //$('#opponent-player').css('background', 'url('+ opponentPic + ') center center no-repeat');
 
         // show page
         $('#gameStart').css('display', 'flex');
+
+
+
+
+
+
 
     });
 
@@ -134,10 +145,14 @@ $(document).ready(function(){
     });
 
     socket.on('opponentMistake_push', function(){
+
+        //animate img
+        $('#opponent-player .player-pic').addClass('animated pulse');
         $('#opponent-player').addClass('shadow-border-red');
 
         setTimeout(function(){
             $('#opponent-player').removeClass('shadow-border-red');
+            $('#opponent-player .player-pic').removeClass('animated pulse');
         }, 2000);
 
         var audio = $("#beepAlert")[0];
