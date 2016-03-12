@@ -1,0 +1,1234 @@
+/* ==========================================================================
+   #basic reset & import
+   ========================================================================== */
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 100%;
+    /*/prevent copy web text*/
+    user-select: none;
+    user-select: none;
+    user-select: none;
+    user-select: none;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    -o-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font: 14px "Lato", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    color: #00B7FF;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border-style: none;
+}
+
+
+
+.mainBody {
+    /*min-height: 100vh;*/
+    display: -webkit-flex;
+    display: -webkit-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    /*border: 1px solid blue;*/
+    min-height: 10vh;
+    font-weight: bold;
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    -o-align-self: stretch;
+    align-self: stretch;
+    /*flex: 1 2 auto;*/
+    background: -webkit-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -moz-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -ms-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -o-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,128,128,1)), color-stop(100%, rgba(176,255,252,1)));
+    background: -webkit-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -moz-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -ms-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -o-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -webkit-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -moz-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -ms-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -o-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -webkit-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -moz-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -ms-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -o-linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: linear-gradient(89deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -webkit-linear-gradient(1deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -moz-linear-gradient(1deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -ms-linear-gradient(1deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: -o-linear-gradient(1deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    background: linear-gradient(1deg, rgba(176,255,252,1) 0%, rgba(0,128,128,1) 100%);
+    /* ff3.6+ */
+    /* safari4+,chrome */
+    /* safari5.1+,chrome10+ */
+    /* opera 11.10+ */
+    /* ie10+ */
+    /* w3c */
+    -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#B0FFFC',GradientType=0 );
+    -moz-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#B0FFFC',GradientType=0 );
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#B0FFFC',GradientType=0 );
+    -o-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#B0FFFC',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#B0FFFC',GradientType=0 );
+    /* ie6-9 */
+}
+
+footer {
+    /*border: 1px solid black;*/
+    min-height: 10vh;
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    -o-align-self: stretch;
+    align-self: stretch;
+    /*flex: 1 2 auto;*/
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(224,239,249,1)), color-stop(50%, rgba(216,225,231,1)), color-stop(73%, rgba(181,198,208,1)), color-stop(100%, rgba(242,246,248,1)));
+    background: -webkit-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -moz-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -ms-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -o-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(224,239,249,1)), color-stop(50%, rgba(216,225,231,1)), color-stop(73%, rgba(181,198,208,1)), color-stop(100%, rgba(242,246,248,1)));
+    background: -webkit-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -moz-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -ms-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -o-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -moz-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -ms-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -o-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -moz-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -ms-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -o-linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: linear-gradient(top, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -moz-linear-gradient(to bottom, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -ms-linear-gradient(to bottom, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: -o-linear-gradient(to bottom, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    background: linear-gradient(to bottom, rgba(224,239,249,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 73%, rgba(242,246,248,1) 100%);
+    -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#f2f6f8', GradientType=0 );
+    -moz-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#f2f6f8', GradientType=0 );
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#f2f6f8', GradientType=0 );
+    -o-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#f2f6f8', GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#f2f6f8', GradientType=0 );
+}
+
+/*header elements*/
+
+.top-label {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.top-label-section {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+
+.top-label-item {
+    padding: 5px 15px;
+    font-size: 1.5em;
+}
+
+.coinsIcon {
+    background: url('../images/coins_header.png') no-repeat;
+    padding: 19px 19px;
+}
+
+/*footer elements*/
+
+.bottom-label {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/*start page, login or connect to facebook*/
+
+.startPage {
+    /*border: 1px solid green;*/
+    /*min-height: 80vh;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex: 3 2 auto;
+    -moz-flex: 3 2 auto;
+    -ms-flex: 3 2 auto;
+    -o-flex: 3 2 auto;
+    flex: 3 2 auto;
+}
+
+.startPage h1 {
+    color: #000088;
+    text-align: center;
+    font-size: 7em;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+
+.startPage img.fbutton {
+    width: 500px;
+    height: 105px;
+    margin: 0 auto;
+}
+
+.startPage .splashBeatMe {
+    /*visibility: hidden;*/
+}
+
+/*All Games page*/
+
+#iconsPage {
+    display: none;
+    /*min-height: 80vh;*/
+    width: 100%;
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*flex: 3 2 auto;*/
+}
+
+.chooseGame {
+    /*min-height: 80vh;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    -o-align-content: center;
+    align-content: center;
+}
+
+.chooseGame-label {
+    /*border: 1px solid green;*/
+    width: 90%;
+    margin: 0 auto;
+    min-height: 10vh;
+}
+
+.chooseGame-label h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 1.00em;
+    line-height: 64px;
+    margin: 0 auto;
+}
+
+.chooseGame-box {
+    /*border: 1px solid blue;*/
+    width: 90%;
+    margin: 0 auto;
+    /*min-height: 70vh;*/
+}
+
+.iconGame-row {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    /*border: 1px solid greenyellow;*/
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    -o-align-content: center;
+    align-content: center;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    min-height: 23vh;
+}
+
+.iconGame-item {
+    /*border: 1px solid orange;*/
+}
+
+.iconGame-item img {
+    width: 90px;
+    height: 90px;
+}
+
+/*#iconsPage .chooseGame {*/
+
+/*align-self: center;*/
+
+/*min-height: 80vh;*/
+
+/*display: flex;*/
+
+/*flex-direction:row;*/
+
+/*justify-content: space-around;*/
+
+/*flex: 3 2 auto;*/
+
+/*}*/
+
+/*display: -webkit-box;*/
+
+/*display: -moz-box;*/
+
+/*display: -ms-flexbox;*/
+
+/*display: -webkit-flex;*/
+
+/*display: flex;*/
+
+/*-webkit-flex-flow: row nowrap;*/
+
+/*justify-content: space-around;*/
+
+/*}*/
+
+/*.chooseGame .flex-container {*/
+
+/*display: flex;*/
+
+/*flex-direction: row;*/
+
+/*align-items: center;*/
+
+/*align-content: center;*/
+
+/*justify-content: center;*/
+
+/*width: 85%;*/
+
+/*margin: 0 auto;*/
+
+/*}*/
+
+/*.flex-item{*/
+
+/*align-items: center;*/
+
+/*}*/
+
+/*.flex-item img{*/
+
+/*padding: 30px 10px;*/
+
+/*cursor: pointer;*/
+
+/*width: 300px;*/
+
+/*border-style: none;*/
+
+/*}*/
+
+/*page when a game start */
+
+.currentGame {
+    /*min-height: 80vh;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    -o-align-content: center;
+    align-content: center;
+}
+
+.currentGame-top-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.headerGame {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    padding: 10px;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    width: 85%;
+}
+
+.player-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    /*border: 1px solid red;*/
+}
+
+.player-container-item {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    border: 0px solid #D7DBDD;
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-box-shadow: -3px 3px 6px #888888;
+    -moz-box-shadow: -3px 3px 6px #888888;
+    -ms-box-shadow: -3px 3px 6px #888888;
+    -o-box-shadow: -3px 3px 6px #888888;
+    box-shadow: -3px 3px 6px #888888;
+}
+
+/*picture from fb*/
+
+.player-pic {
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.shadow-border-red {
+    border: 1px solid red;
+    -webkit-box-shadow: -3px 3px 6px red;
+    -moz-box-shadow: -3px 3px 6px red;
+    -ms-box-shadow: -3px 3px 6px red;
+    -o-box-shadow: -3px 3px 6px red;
+    box-shadow: -3px 3px 6px red;
+}
+
+.player-number-item {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    font-size: 35px;
+    padding-left: 10px;
+}
+
+.player-container-right {
+    /*margin-left: auto;*/
+    /*max-width: 245px;*/
+    border: 1px solid blue;
+}
+
+.phrase-text {
+    width: 85%;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    font-size: 1.75em;
+    margin-top: 4%;
+    font-weight: bold;
+}
+
+.bottomIconGames {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    width: 92%;
+}
+
+.footer-icon {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    /*padding: 0 12px 0 12px;*/
+    font-size: 1.5em;
+    color: #9D9D00;
+}
+
+.coinsfooter {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    /* border: 1px solid #D7DBDD; */
+    width: 64px;
+    height: 64px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    /* box-shadow: -3px 3px 6px #888888; */
+    float: left;
+}
+
+.bottomIconGames:nth-child(3) {
+    font-size: 4em;
+}
+
+#rulesGame {
+    display: none;
+}
+
+.flex-header img {
+    margin-left: 2.5em;
+}
+
+
+
+.rules-item {
+    padding: 10px;
+    border: 1px solid grey;
+    color: darkblue;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 76px;
+}
+
+.rule-flex1 {
+    /*flex: 1 1 20em;*/
+}
+
+.rule-flex2 {
+    -webkit-flex: 2 2 20em;
+    -moz-flex: 2 2 20em;
+    -ms-flex: 2 2 20em;
+    -o-flex: 2 2 20em;
+    flex: 2 2 20em;
+}
+
+.flex-header ul#descrip-game {
+    margin-left: 1em;
+}
+
+/*user connected*/
+
+#userList {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.connectedUsers {
+    /*min-height: 80vh;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    -o-align-content: center;
+    align-content: center;
+}
+
+.userScreen {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    /*min-height: 80vh;*/
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    -o-align-content: center;
+    align-content: center;
+}
+
+.title-userScreen {
+    min-height: 10vh;
+    width: 85%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    /*border: 1px solid green;*/
+}
+
+.title-userScreen h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.currentUsers {
+    /*min-height: 60vh;*/
+    width: 85%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    /*border: 1px solid blue;*/
+}
+
+.user-online {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+}
+
+/*users list page*/
+
+.user-online div {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.user-online div img {
+    border: 1px solid;
+}
+
+.user-online div p {
+    width: 76%;
+    margin: 0;
+    padding-left: 3%;
+    font-size: 4em;
+    line-height: 88px;
+}
+
+#gameStart {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /*min-height: 80vh;*/
+}
+
+.writeText {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    -o-align-self: center;
+    align-self: center;
+    width: 85%;
+}
+
+.wordBox {
+    font-size: 10.75rem;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+}
+
+.wordBox:focus,
+.wordBox.focus {
+    border-bottom: solid 2px #969696;
+    outline: none;
+}
+
+#gameEnd {
+    display: none;
+    /*min-height: 80vh;*/
+    width: 100%;
+}
+
+.gameEnd-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.gameEnd-label {
+    color: #000000;
+    font-size: 5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gameEnd-outcome {
+    color: #86969C;
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.gameEnd-image img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.gameEnd-container button {
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #4EBBE4;
+    border: 1px solid #16A2D7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+@media (max-width: 40em) {
+  /* 40em = 640px */
+    .startPage img.fbutton {
+        width: 230px;
+        height: 55px;
+    }
+
+    .startPage img.splashBeatMe {
+        width: 300px;
+        height: 300px;
+        -webkit-align-self: center;
+        -moz-align-self: center;
+        -ms-align-self: center;
+        -o-align-self: center;
+        align-self: center;
+    }
+
+    /*#iconsPage .flex-item img{*/
+
+    /*width: 100px;*/
+
+    /*height: 100px;*/
+
+    /*}*/
+
+    .wordBox {
+        font-size: 2.75rem;
+    }
+
+    /*---userList page---*/
+
+    .title-userScreen h1 {
+        font-size: 1.75em;
+    }
+
+    .user-online {
+        padding: 0;
+    }
+
+    .user-online div img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-online div p {
+        width: 60%;
+        font-size: 2em;
+        line-height: 88px;
+    }
+
+    /*---gameEnd page---*/
+
+    .gameEnd-label {
+        font-size: 4em;
+    }
+
+    .gameEnd-image {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .footer-icon {
+        padding: 4px 12px 0 6px;
+    }
+
+    .footer-icon img {
+        width: 49px;
+        height: 34px;
+        /*padding: 0 12px 0 6px;*/
+    }
+
+    .coinsfooter {
+        width: 51px;
+        height: 51px;
+    }
+
+    .bottomIconGames:nth-child(3) {
+        font-size: 1.75em;
+    }
+}
+
+/*timer*/
+
+
+/* Styles for old versions of IE */
+.timer {
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+.timer:not(:required) {
+    border: 6px solid #c8d;
+    -moz-border-radius: 24px;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999px;
+    width: 48px;
+    height: 48px;
+}
+.timer:not(:required)::before {
+    -webkit-animation: timer 1250ms infinite linear;
+    -khtml-animation: timer 1250ms infinite linear;
+    -moz-animation: timer 1250ms infinite linear;
+    -ms-animation: timer 1250ms infinite linear;
+    -o-animation: timer 1250ms infinite linear;
+    animation: timer 1250ms infinite linear;
+    -moz-transform-origin: 3px 3px;
+    -ms-transform-origin: 3px 3px;
+    -webkit-transform-origin: 3px 3px;
+    transform-origin: 3px 3px;
+    background: #c8d;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 19.2px;
+    left: 15px;
+    top: 15px;
+}
+.timer:not(:required)::after {
+    -webkit-animation: timer 15000ms infinite linear;
+    -khtml-animation: timer 15000ms infinite linear;
+    -moz-animation: timer 15000ms infinite linear;
+    -ms-animation: timer 15000ms infinite linear;
+    -o-animation: timer 15000ms infinite linear;
+    animation: timer 15000ms infinite linear;
+    -moz-transform-origin: 3px 3px;
+    -ms-transform-origin: 3px 3px;
+    -webkit-transform-origin: 3px 3px;
+    transform-origin: 3px 3px;
+    background: #c8d;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 16px;
+    left: 15px;
+    top: 15px;
+}
+
+@-webkit-keyframes timer {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes timer {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes timer {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes timer {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media (max-height: 25em) {
+  /*25em = 360px */
+  #gameStart{
+
+    /*min-height: 90vh;*/
+  }
+    /*header*/
+  .top-label {
+    display: none;
+  }
+
+  /*footer */
+  .bottom-label{
+    display: none;
+  }
+
+}
+
+
+
+
+
+
